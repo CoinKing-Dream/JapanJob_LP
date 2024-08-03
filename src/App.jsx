@@ -1,3 +1,6 @@
+import AOS from "aos";
+import "aos/dist/aos.css";
+
 import "./App.css";
 import FavoriteBorder from "@mui/icons-material/FavoriteBorder";
 import Favorite from "@mui/icons-material/Favorite";
@@ -29,11 +32,16 @@ function App() {
     },
   ];
 
+  useEffect(() => {
+    AOS.init();
+    AOS.refresh();
+  }, []);
+
   return (
     <div className="w-full flex justify-center items-center">
       <div className="w-[80%] min-w-[220px] flex flex-col gap-[50px]">
         <div className="flex flex-col gap-3">
-          <div className="text-3xl text-center">自治体防災担当者の方へ</div>
+          <div className="text-3xl text-center" data-aos="fade-up">自治体防災担当者の方へ</div>
           <div className="text-xl text-center">
             水災害リスクをまるごと監視！あらゆる情報をRisKmaに
           </div>
@@ -74,6 +82,7 @@ function App() {
                 <div>
                   <img src={item.img} alt="" />
                 </div>
+                  
                 <div>{item.contents}</div>
               </div>
             );
