@@ -8,6 +8,7 @@ import ForwardToInboxOutlinedIcon from "@mui/icons-material/ForwardToInboxOutlin
 import CloudDownloadOutlinedIcon from "@mui/icons-material/CloudDownloadOutlined";
 
 import logo from "./assets/img/logo.svg";
+import CTIlogo from "./assets/img/CTI_logo.png";
 import riskmaPDF from "./assets/pdf/RisKma.pdf";
 
 function App() {
@@ -36,7 +37,8 @@ function App() {
 
   const feeback = [
     {
-      title: "A",
+      company: "A",
+      name: "A",
       content: "B",
       img: {
         src: "",
@@ -44,7 +46,8 @@ function App() {
       },
     },
     {
-      title: "A",
+      company: "A",
+      name: "A",
       content: "B",
       img: {
         src: "",
@@ -52,7 +55,8 @@ function App() {
       },
     },
     {
-      title: "A",
+      company: "A",
+      name: "A",
       content: "B",
       img: {
         src: "",
@@ -68,7 +72,7 @@ function App() {
 
   return (
     <div className="w-full flex justify-center items-center">
-      <div className="w-full flex flex-col gap-[100px]">
+      <div className="w-full flex flex-col gap-[50px]">
         <div className="sky-background flex flex-col justify-center items-center gap-12 text-white pt-[100px] pb-[200px] relative rounded-b-lg">
           <div className="absolute bg-white w-[60%] h-[100px] bottom-0 rounded-t-full"></div>
           <div className="w-full px-[200px] pb-[50px] ">
@@ -170,7 +174,7 @@ function App() {
             {feeback.map((item) => {
               return (
                 <>
-                  <div>{item.title}</div>
+                  <div><FeedbackCard item={item}/></div>
                 </>
               );
             })}
@@ -179,7 +183,7 @@ function App() {
 
         <div className="w-full text-center bg-sky-500 text-white py-[50px] flex flex-col justify-center items-center relative hover:bg-sky-700">
           <div className="absolute top-0 rounded-b-[40px] bg-white w-[60%] h-[30px]"></div>
-          <div>
+          <div className="my-12">
             <a
               href="https://www.cti-rains.net/mailform/form_miruone.html"
               target="_blank"
@@ -200,16 +204,27 @@ function App() {
                     </span>
                   </div>
                   <div>
-                    <span className="font-bold text-3xl underline">
+                    <span className="font-bold text-4xl underline">
                       お問い合わせ・お見積り
                     </span>
-                    <span>はこちら </span>
+                    <span className="text-xl font-bold">はこちら </span>
                   </div>
                 </div>
               </div>
             </a>
           </div>
           <div className="absolute bottom-0 rounded-t-full bg-white w-[60%] h-[30px]"></div>
+        </div>
+
+        <div className="w-full flex flex-col jusify-center items-center pb-[50px] gap-7">
+            <div className="w-full h-[3px] bg-lime-500 mb-[50px]"></div>
+            <a href="http://www.ctie.co.jp/index.html" className="hover:opacity-60">
+              <img src={CTIlogo} width={400} height={20}></img>
+            </a>
+            <div className="flex flex-col justify-center items-center">
+              <div>Copyright RisKma - All Rights Reserved. </div>
+              <div>「RisKma」は株式会社建設技術研究所の登録商標です。</div>
+            </div>
         </div>
       </div>
     </div>
