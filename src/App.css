@@ -1,4 +1,4 @@
-#root {
-  color: white;
+.sky-background {
+  background-image: url("./assets/img/sky_background.jpg");
+  background-repeat: no-repeat;
 }
-
