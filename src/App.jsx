@@ -2,10 +2,9 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
 import "./App.css";
-import FavoriteBorder from "@mui/icons-material/FavoriteBorder";
+import Rating from '@mui/material/Rating';
 import Favorite from "@mui/icons-material/Favorite";
 import CloudDownloadOutlinedIcon from "@mui/icons-material/CloudDownloadOutlined";
-import Checkbox from "@mui/material/Checkbox";
 
 import logo from "./assets/img/logo.svg";
 
@@ -34,6 +33,31 @@ function App() {
     },
   ];
 
+  const feeback = [
+    {
+      title: "A",
+      content: "B",
+      img: {
+        src: "",
+        alt: ""
+      }
+    }, {
+      title: "A",
+      content: "B",
+      img: {
+        src: "",
+        alt: ""
+      }
+    }, {
+      title: "A",
+      content: "B",
+      img: {
+        src: "",
+        alt: ""
+      }
+    }, 
+  ]
+
   useEffect(() => {
     AOS.init();
     AOS.refresh();
@@ -41,11 +65,10 @@ function App() {
 
   return (
     <div className="w-full flex justify-center items-center">
-      <div className="w-screen flex flex-col gap-[100px]">
+      <div className="w-full flex flex-col gap-[100px]">
         <div className="sky-background flex flex-col justify-center items-center gap-12 text-white pt-[100px] pb-[200px] relative">
-          <div className="absolute bg-white w-[60%] h-[100px] bottom-0 rounded-t-full">
-          </div>
-          <div className="w-screen text-left px-[200px] pb-[50px]">
+          <div className="absolute bg-white w-[60%] h-[100px] bottom-0 rounded-t-full"></div>
+          <div className="w-full text-left px-[200px] pb-[50px]">
             <a href="">
               <img width="200" src={logo} alt="Logo"></img>
             </a>
@@ -84,7 +107,7 @@ function App() {
                 data-aos-delay="50"
                 data-aos-easing="easing-in-out"
               >
-                <Favorite color="success"/>
+                <Favorite color="success" />
                 <div className="text-blue-800">{item}</div>
               </div>
             ))}
@@ -109,7 +132,7 @@ function App() {
           data-aos-delay="50"
           data-aos-easing="easing-in-out"
         >
-          <button className="w-[80%] bg-sky-500 hover:bg-sky-700">
+          <button className="px-[100px] py-[20px] rounded-full text-2xl font-bold text-white bg-sky-500 hover:bg-sky-700">
             <span>パンフレットのダウンロードはこちら！</span>
             <CloudDownloadOutlinedIcon />
           </button>
@@ -131,6 +154,20 @@ function App() {
               </div>
             );
           })}
+        </div>
+
+        <div>
+          <div className="flex flex-row justify-center items-center">
+            {
+              feeback.map(item => {
+                reutnr (
+                  <>
+                    
+                  </>
+                )
+              })
+            }
+          </div>
         </div>
       </div>
     </div>
