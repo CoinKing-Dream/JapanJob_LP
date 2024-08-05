@@ -8,7 +8,6 @@ import CloudDownloadOutlinedIcon from "@mui/icons-material/CloudDownloadOutlined
 import Checkbox from "@mui/material/Checkbox";
 
 import logo from "./assets/img/logo.svg";
-import {Link} from "react-dom";
 
 function App() {
   const label = { inputProps: { "aria-label": "Checkbox demo" } };
@@ -42,12 +41,14 @@ function App() {
 
   return (
     <div className="w-full flex justify-center items-center">
-      <div className="w-screen flex flex-col gap-[200px]">
-        <div className="sky-background flex flex-col justify-center items-center gap-12 text-white pt-[100px] pb-[150px]">
+      <div className="w-screen flex flex-col gap-[100px]">
+        <div className="sky-background flex flex-col justify-center items-center gap-12 text-white pt-[100px] pb-[200px] relative">
+          <div className="absolute bg-white w-[60%] h-[100px] bottom-0 rounded-t-full">
+          </div>
           <div className="w-screen text-left px-[200px] pb-[50px]">
-            <Link to="/">
+            <a href="">
               <img width="200" src={logo} alt="Logo"></img>
-            </Link>
+            </a>
           </div>
           <div
             className="text-7xl text-center"
@@ -59,46 +60,43 @@ function App() {
           </div>
           <div
             className="text-2xl text-center"
-            data-aos-delay="50"
+            data-aos="fade-up"
+            data-aos-delay="150"
             data-aos-easing="easing-in-out"
           >
             水災害リスクをまるごと監視！あらゆる情報をRisKmaに
           </div>
         </div>
-        <div className="flex flex-col justify-center items-center gap-5">
+        <div className="flex flex-col justify-center items-center gap-8">
           <div
-            className="text-4xl text-center"
+            className="text-5xl font-bold text-center underline decoration-wavy underline-offset-8 text-violet-800"
             data-aos="fade-up"
             data-aos-delay="50"
             data-aos-easing="easing-in-out"
           >
             {sympathetic.question}
           </div>
-          <div className="w-[450px]">
+          <div className="w-[550px]">
             {sympathetic.answer.map((item) => (
               <div
-                className="flex flex-row justify-left items-center gap-3 text-2xl"
+                className="flex flex-row justify-left items-center gap-3 my-3 text-3xl"
                 data-aos="fade-up"
                 data-aos-delay="50"
                 data-aos-easing="easing-in-out"
               >
-                <Checkbox
-                  {...label}
-                  icon={<FavoriteBorder />}
-                  checkedIcon={<Favorite />}
-                />
-                <div>{item}</div>
+                <Favorite color="success"/>
+                <div className="text-blue-800">{item}</div>
               </div>
             ))}
           </div>
         </div>
         <div
-          className="flex justify-center items-center"
+          className="flex justify-center items-center bg-lime-500 font-bold py-[100px] text-white"
           data-aos="fade-up"
           data-aos-delay="50"
           data-aos-easing="easing-in-out"
         >
-          <div className="w-[80%]">
+          <div className="w-[60%] text-2xl leading-10">
             (株)建設技術研究所の水災害リスクマッピングシステム「RisKma」なら、気象
             庁の予測雨量、キキクル、注意報警報や、国・都道府県の河川水位、雨量計、
             監視カメラの情報をすべて同じ画面で確認できます。またすでに設置の観測機
