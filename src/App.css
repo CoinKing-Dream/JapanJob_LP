@@ -2,3 +2,54 @@
   background-image: url("./assets/img/sky_background.jpg");
   background-repeat: no-repeat;
 }
+
+.email-animation {
+  animation: updownanimation 1s linear infinite;
+}
+@keyframes updownanimation {
+  from {
+    transform: translateX(0px);
+  }
+  50% {
+    transform: translateX(-15px);
+  }
+  to {
+    transform: translateX(0px);
+  }
+}
+
+.logo-animation {
+  animation: logoanimation 2s ease-in-out infinite;
+}
+@keyframes logoanimation {
+  from {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+.logo-shadow-animation {
+  animation: shadowlogoanimation 2s ease-in-out infinite;
+  border-radius: 100%;
+  transform: scale(100%, 20%);
+  opacity: 0.2;
+}
+@keyframes shadowlogoanimation {
+  from {
+    transform: scale(100%, 20%);
+    opacity: 0.1;
+  }
+  50% {
+    transform: scale(120%, 30%);
+    opacity: 0.4;
+  }
+  to {
+    transform: scale(100%, 20%);
+    opacity: 0.1;
+  }
+}
