@@ -35,34 +35,19 @@ function App() {
     },
   ];
 
-  const feeback = [
-    {
-      company: "A",
-      name: "A",
-      content: "B",
-      img: {
-        src: "",
-        alt: "",
-      },
-    },
-    {
-      company: "A",
-      name: "A",
-      content: "B",
-      img: {
-        src: "",
-        alt: "",
-      },
-    },
-    {
-      company: "A",
-      name: "A",
-      content: "B",
-      img: {
-        src: "",
-        alt: "",
-      },
-    },
+  const feebackPlace = [
+    "北海道苫小牧市",
+    "福島県伊達市",
+    "福島県田村市",
+    "群馬県",
+    "千葉県柏市",
+    "東京都八王子市",
+    "長野県佐久穂町",
+    "静岡県袋井市",
+    "愛知県春日井市",
+    "石川県宝達志水町",
+    "山口県光市",
+    "佐賀県白石町",
   ];
 
   useEffect(() => {
@@ -170,14 +155,27 @@ function App() {
         </div>
 
         <div>
-          <div className="flex flex-row justify-center items-center">
-            {feeback.map((item) => {
-              return (
-                <>
-                  <div><FeedbackCard item={item}/></div>
-                </>
-              );
-            })}
+          <div className="flex flex-col justify-center items-center py-[100px]">
+            <div className="w-full relative flex flex-col justify-center items-center my-[50px]">
+              <div className="w-full h-[5px] bg-blue-500 absolute z-10"></div>
+              <div className="z-20 rounded-full absoulte bg-blue-500 inline font-bold text-5xl text-white px-[150px] py-[20px]">導入実績領域</div>
+            </div>
+            <div className="flex flex-row justify-center items-center flex-wrap w-[70%] gap-5">
+              {feebackPlace.map((place, index) => {
+                return (
+                  <>
+                    <div
+                      data-aos="fade-up"
+                      data-aos-delay={50*index}
+                      data-aos-easing="easing-in-out"
+                      className="w-[400px] font-bold text-3xl text-emerald-600"
+                    >
+                      {place}
+                    </div>
+                  </>
+                );
+              })}
+            </div>
           </div>
         </div>
 
@@ -217,14 +215,17 @@ function App() {
         </div>
 
         <div className="w-full flex flex-col jusify-center items-center pb-[50px] gap-7">
-            <div className="w-full h-[3px] bg-lime-500 mb-[50px]"></div>
-            <a href="http://www.ctie.co.jp/index.html" className="hover:opacity-60">
-              <img src={CTIlogo} width={400} height={20}></img>
-            </a>
-            <div className="flex flex-col justify-center items-center">
-              <div>Copyright RisKma - All Rights Reserved. </div>
-              <div>「RisKma」は株式会社建設技術研究所の登録商標です。</div>
-            </div>
+          <div className="w-full h-[3px] bg-lime-500 mb-[50px]"></div>
+          <a
+            href="http://www.ctie.co.jp/index.html"
+            className="hover:opacity-60"
+          >
+            <img src={CTIlogo} width={400} height={20}></img>
+          </a>
+          <div className="flex flex-col justify-center items-center">
+            <div>Copyright RisKma - All Rights Reserved. </div>
+            <div>「RisKma」は株式会社建設技術研究所の登録商標です。</div>
+          </div>
         </div>
       </div>
     </div>
