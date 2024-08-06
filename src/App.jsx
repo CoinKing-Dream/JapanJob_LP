@@ -225,7 +225,7 @@ function App() {
         </div>
 
         <div
-          className="w-full text-center bg-sky-500 text-white py-[50px] flex flex-col justify-center items-center relative hover:bg-sky-700"
+          className="w-full text-center bg-sky-500 text-white py-[50px] flex flex-col justify-center items-center relative hover:bg-sky-400"
           data-aos="fade-up"
           data-aos-delay="50"
           data-aos-easing="easing-in-out"
