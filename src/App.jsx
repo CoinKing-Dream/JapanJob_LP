@@ -166,13 +166,13 @@ function App() {
             </a>
           </div>
         </div>
-        <div className="flex flex-col justify-center items-center gap-5 bg-emerald-300 py-0 rounded-lg">
-          <div className="w-full relative flex flex-col justify-center items-center my-0 mb-[100px]">
+        <div className="w-full flex flex-col justify-center items-center gap-5 bg-emerald-300 py-[50px] rounded-lg">
+          {/* <div className="w-full relative flex flex-col justify-center items-center my-0 mb-[100px]">
             <div className="w-full h-[5px] bg-blue-500 absolute z-10"></div>
             <div className="z-20 rounded-full absoulte bg-blue-500 inline font-bold text-5xl text-white px-[150px] py-[20px]">
               ベネフィット領域
             </div>
-          </div>
+          </div> */}
           <div className="w-[70%] flex flex-row flex-wrap justify-center items-center gap-8">
             {benefits.map((item, index) => {
               return (
