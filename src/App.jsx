@@ -189,7 +189,7 @@ function App() {
         </div>
 
         <div>
-          <div className="flex flex-col justify-center items-center py-[100px]">
+          <div className="flex flex-col justify-center items-center pb-[100px]">
             <div
               className="w-full relative flex flex-col justify-center items-center my-[50px] hover:opacity-90 duration-500"
               data-aos="flip-up"
