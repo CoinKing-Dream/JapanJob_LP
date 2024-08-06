@@ -41,15 +41,15 @@
 }
 @keyframes shadowlogoanimation {
   from {
-    transform: scale(100%, 20%);
-    opacity: 0.1;
-  }
-  50% {
     transform: scale(120%, 30%);
     opacity: 0.4;
   }
-  to {
+  50% {
     transform: scale(100%, 20%);
     opacity: 0.1;
+  }
+  to {
+    transform: scale(120%, 30%);
+    opacity: 0.4;
   }
 }
