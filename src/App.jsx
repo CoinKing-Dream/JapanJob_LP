@@ -45,24 +45,29 @@ function App() {
   };
   const benefits = [
     {
+      title: "気象と洪水の一括監視",
       contents:
         "予測雨量などの気象情報、既設観測所の雨量、水位、カメラ情報と同時に閲覧が可能",
       img: benefitFirImg,
     },
     {
+      title: "直感操作システム",
       contents: "マニュアルのいらない直感的操作が可能なシステム画面",
       img: benefitSecImg,
     },
     {
+      title: "「みるわん」と簡単連携",
       contents:
         "水位計・雨量計・カメラ等のIoT監視観測パッケージ「みるわん」との連携が容易",
       img: benefitThiImg,
     },
     {
+      title: "カスタマイズ対応",
       contents: "導入先毎のカスタマイズに対応",
       img: benefitFouImg,
     },
     {
+      title: "専門サポート提供",
       contents:
         "河川コンサルタントが蓄積した専門的なデータやノウハウを基に、適切な導入方法について、ご提案・サポ",
       img: benefitFifImg,
