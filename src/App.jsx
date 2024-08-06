@@ -2,11 +2,12 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
 import "./App.css";
-import DoneOutlineOutlinedIcon from '@mui/icons-material/DoneOutlineOutlined';
+import DoneOutlineOutlinedIcon from "@mui/icons-material/DoneOutlineOutlined";
 import ForwardToInboxOutlinedIcon from "@mui/icons-material/ForwardToInboxOutlined";
-import DownloadingIcon from '@mui/icons-material/Downloading';
+import BrowserUpdatedTwoToneIcon from "@mui/icons-material/BrowserUpdatedTwoTone";
 import BenefitCard from "./componenets/FeedbackCard";
 
+import brochureImg from "./assets/img/brochure-btn-img.png";
 import logo from "./assets/img/logo.svg";
 import CTIlogo from "./assets/img/CTI_logo.png";
 import riskmaPDF from "./assets/pdf/RisKma.pdf";
@@ -76,7 +77,7 @@ function App() {
     <div className="w-full flex justify-center items-center">
       <div className="w-full flex flex-col">
         <div className="sky-background flex flex-col justify-center items-center gap-12 text-white pt-[100px] pb-[200px] relative rounded-b-lg">
-          <div className="absolute bg-white w-[60%] h-[80px] bottom-0 rounded-t-full"></div>
+          <div className="absolute bg-white w-[60%] h-[50px] bottom-0 rounded-t-full"></div>
           <div className="w-full px-[200px] pb-[50px] ">
             <div className="w-[200px] flex flex-col jusity-center items-center">
               <a href="" className="logo-animation">
@@ -140,20 +141,30 @@ function App() {
           </div>
         </div>
         <div
-          className="flex justify-center items-center my-[100px]"
-          data-aos="fade-up"
+          className="flex justify-center items-center h-[400px]"
+          data-aos="slide-up"
           data-aos-delay="50"
-          data-aos-duration="1000"
+          data-aos-duration="500"
           data-aos-easing="easing-in-out"
         >
-          <a
-            href={riskmaPDF}
-            target="_blank"
-            className="px-[100px] py-[20px] rounded-full text-4xl font-bold text-white bg-sky-500 hover:bg-sky-700 hover:text-white"
-          >
-            <span>パンフレットのダウンロードはこちら！</span>
-            <DownloadingIcon fontSize="large" className="animate-bounce text-yellow-200"/>
-          </a>
+          <div className="flex justify-center items-center max-w-[800px] w-[60%] h-[400px] relative">
+            <img
+              src={brochureImg}
+              className="absolute top-[80px] left-[50px]"
+              width={200}
+            ></img>
+            <a
+              href={riskmaPDF}
+              target="_blank"
+              className="w-[100%] pl-[300px] pr-[50px] py-[20px] rounded-full text-4xl font-bold text-white duration-500 bg-emerald-500 hover:bg-emerald-900 hover:text-white"
+            >
+              <span>パンフレットのダウンロードはこちら！</span>
+              <BrowserUpdatedTwoToneIcon
+                fontSize="large"
+                className="animate-bounce text-yellow-200"
+              />
+            </a>
+          </div>
         </div>
         <div className="flex flex-col justify-center items-center gap-5 bg-emerald-300 py-0 rounded-lg">
           <div className="w-full relative flex flex-col justify-center items-center my-0 mb-[100px]">
@@ -179,9 +190,14 @@ function App() {
 
         <div>
           <div className="flex flex-col justify-center items-center py-[100px]">
-            <div className="w-full relative flex flex-col justify-center items-center my-[50px]">
-              <div className="w-full h-[5px] bg-blue-500 absolute z-10"></div>
-              <div className="z-20 rounded-full absoulte bg-blue-500 inline font-bold text-5xl text-white px-[150px] py-[20px]">
+            <div
+              className="w-full relative flex flex-col justify-center items-center my-[50px] hover:opacity-90 duration-500"
+              data-aos="flip-up"
+              data-aos-delay="50"
+              data-aos-easing="easing-in-out"
+            >
+              <div className="w-full h-[5px] bg-lime-500 absolute z-10"></div>
+              <div className="z-20 rounded-full absoulte bg-lime-600 inline font-bold text-5xl text-white px-[150px] py-[20px]">
                 導入実績領域
               </div>
             </div>
@@ -204,7 +220,12 @@ function App() {
           </div>
         </div>
 
-        <div className="w-full text-center bg-sky-500 text-white py-[50px] flex flex-col justify-center items-center relative hover:bg-sky-700">
+        <div
+          className="w-full text-center bg-sky-500 text-white py-[50px] flex flex-col justify-center items-center relative hover:bg-sky-700"
+          data-aos="fade-up"
+          data-aos-delay="50"
+          data-aos-easing="easing-in-out"
+        >
           <div className="absolute top-0 rounded-b-[40px] bg-white w-[60%] h-[30px]"></div>
           <div className="my-12">
             <a
@@ -239,8 +260,7 @@ function App() {
           <div className="absolute bottom-0 rounded-t-full bg-white w-[60%] h-[30px]"></div>
         </div>
 
-        <div className="w-full flex flex-col jusify-center items-center pb-[50px] gap-7 bg-gray-300">
-          <div className="w-full h-[3px] bg-lime-500 mb-[50px]"></div>
+        <div className="w-full flex flex-col jusify-center items-center py-[50px] gap-7 bg-gray-100">
           <a
             href="http://www.ctie.co.jp/index.html"
             className="hover:opacity-60"
