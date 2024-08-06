@@ -2,9 +2,9 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
 import "./App.css";
-import Favorite from "@mui/icons-material/Favorite";
+import DoneOutlineOutlinedIcon from '@mui/icons-material/DoneOutlineOutlined';
 import ForwardToInboxOutlinedIcon from "@mui/icons-material/ForwardToInboxOutlined";
-import CloudDownloadOutlinedIcon from "@mui/icons-material/CloudDownloadOutlined";
+import DownloadingIcon from '@mui/icons-material/Downloading';
 import BenefitCard from "./componenets/FeedbackCard";
 
 import logo from "./assets/img/logo.svg";
@@ -76,7 +76,7 @@ function App() {
     <div className="w-full flex justify-center items-center">
       <div className="w-full flex flex-col">
         <div className="sky-background flex flex-col justify-center items-center gap-12 text-white pt-[100px] pb-[200px] relative rounded-b-lg">
-          <div className="absolute bg-white w-[60%] h-[100px] bottom-0 rounded-t-full"></div>
+          <div className="absolute bg-white w-[60%] h-[80px] bottom-0 rounded-t-full"></div>
           <div className="w-full px-[200px] pb-[50px] ">
             <div className="w-[200px] flex flex-col jusity-center items-center">
               <a href="" className="logo-animation">
@@ -102,7 +102,7 @@ function App() {
             水災害リスクをまるごと監視！あらゆる情報をRisKmaに
           </div>
         </div>
-        <div className="flex flex-col justify-center items-center gap-8 mb-[150px]">
+        <div className="flex flex-col justify-center items-center gap-8 my-[100px]">
           <div
             className="text-5xl font-bold text-center underline decoration-wavy underline-offset-8 text-violet-800"
             data-aos="fade-up"
@@ -112,14 +112,14 @@ function App() {
             {sympathetic.question}
           </div>
           <div className="w-[550px]">
-            {sympathetic.answer.map((item) => (
+            {sympathetic.answer.map((item, index) => (
               <div
                 className="flex flex-row justify-left items-center gap-3 my-3 text-3xl"
                 data-aos="fade-up"
-                data-aos-delay="50"
+                data-aos-delay={index * 100}
                 data-aos-easing="easing-in-out"
               >
-                <Favorite color="success" />
+                <DoneOutlineOutlinedIcon color="success" />
                 <div className="text-blue-800">{item}</div>
               </div>
             ))}
@@ -127,11 +127,12 @@ function App() {
         </div>
         <div
           className="flex justify-center items-center bg-lime-500 font-bold py-[100px] text-white rounded-[20px] mt-[50px]"
-          data-aos="fade-up"
-          data-aos-delay="50"
+          data-aos="flip-down"
+          data-aos-delay="100"
+          data-aos-duration="1000"
           data-aos-easing="easing-in-out"
         >
-          <div className="w-[60%] text-2xl leading-10">
+          <div className="w-[50%] text-3xl leading-10">
             (株)建設技術研究所の水災害リスクマッピングシステム「RisKma」なら、気象
             庁の予測雨量、キキクル、注意報警報や、国・都道府県の河川水位、雨量計、
             監視カメラの情報をすべて同じ画面で確認できます。またすでに設置の観測機
@@ -148,10 +149,10 @@ function App() {
           <a
             href={riskmaPDF}
             target="_blank"
-            className="px-[100px] py-[20px] rounded-full text-2xl font-bold text-white bg-sky-500 hover:bg-sky-700 hover:text-white"
+            className="px-[100px] py-[20px] rounded-full text-4xl font-bold text-white bg-sky-500 hover:bg-sky-700 hover:text-white"
           >
             <span>パンフレットのダウンロードはこちら！</span>
-            <CloudDownloadOutlinedIcon />
+            <DownloadingIcon fontSize="large" className="animate-bounce text-yellow-200"/>
           </a>
         </div>
         <div className="flex flex-col justify-center items-center gap-5 bg-emerald-300 py-0 rounded-lg">
