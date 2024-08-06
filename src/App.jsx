@@ -2,39 +2,22 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
 import "./App.css";
-import Rating from "@mui/material/Rating";
 import Favorite from "@mui/icons-material/Favorite";
 import ForwardToInboxOutlinedIcon from "@mui/icons-material/ForwardToInboxOutlined";
 import CloudDownloadOutlinedIcon from "@mui/icons-material/CloudDownloadOutlined";
+import BenefitCard from "./componenets/FeedbackCard";
 
 import logo from "./assets/img/logo.svg";
 import CTIlogo from "./assets/img/CTI_logo.png";
 import riskmaPDF from "./assets/pdf/RisKma.pdf";
 
-function App() {
-  const sympathetic = {
-    question: "こんなお悩みはありませんか？",
-    answer: [
-      "水防に必要な情報がバラバラ",
-      "庁内のPCでしか情報が見られない",
-      "雨量・水位の観測網が不足している",
-    ],
-  };
-  const benefits = [
-    {
-      contents: "A",
-      img: "",
-    },
-    {
-      contents: "B",
-      img: "",
-    },
-    {
-      contents: "C",
-      img: "",
-    },
-  ];
+import benefitFirImg from "./assets/img/1_map.png";
+import benefitSecImg from "./assets/img/2_service.png";
+import benefitThiImg from "./assets/img/3_mirone.png";
+import benefitFouImg from "./assets/img/1_map.png";
+import benefitFifImg from "./assets/img/1_map.png";
 
+function App() {
   const feebackPlace = [
     "北海道苫小牧市",
     "福島県伊達市",
@@ -50,6 +33,40 @@ function App() {
     "佐賀県白石町",
   ];
 
+  const sympathetic = {
+    question: "こんなお悩みはありませんか？",
+    answer: [
+      "水防に必要な情報がバラバラ",
+      "庁内のPCでしか情報が見られない",
+      "雨量・水位の観測網が不足している",
+    ],
+  };
+  const benefits = [
+    {
+      contents:
+        "予測雨量などの気象情報、既設観測所の雨量、水位、カメラ情報と同時に閲覧が可能",
+      img: benefitFirImg,
+    },
+    {
+      contents: "マニュアルのいらない直感的操作が可能なシステム画面",
+      img: benefitSecImg,
+    },
+    {
+      contents:
+        "水位計・雨量計・カメラ等のIoT監視観測パッケージ「みるわん」との連携が容易",
+      img: benefitThiImg,
+    },
+    {
+      contents: "導入先毎のカスタマイズに対応",
+      img: benefitFouImg,
+    },
+    {
+      contents:
+        "河川コンサルタントが蓄積した専門的なデータやノウハウを基に、適切な導入方法について、ご提案・サポ",
+      img: benefitFifImg,
+    },
+  ];
+
   useEffect(() => {
     AOS.init();
     AOS.refresh();
@@ -57,7 +74,7 @@ function App() {
 
   return (
     <div className="w-full flex justify-center items-center">
-      <div className="w-full flex flex-col gap-[50px]">
+      <div className="w-full flex flex-col">
         <div className="sky-background flex flex-col justify-center items-center gap-12 text-white pt-[100px] pb-[200px] relative rounded-b-lg">
           <div className="absolute bg-white w-[60%] h-[100px] bottom-0 rounded-t-full"></div>
           <div className="w-full px-[200px] pb-[50px] ">
@@ -85,7 +102,7 @@ function App() {
             水災害リスクをまるごと監視！あらゆる情報をRisKmaに
           </div>
         </div>
-        <div className="flex flex-col justify-center items-center gap-8">
+        <div className="flex flex-col justify-center items-center gap-8 mb-[150px]">
           <div
             className="text-5xl font-bold text-center underline decoration-wavy underline-offset-8 text-violet-800"
             data-aos="fade-up"
@@ -109,7 +126,7 @@ function App() {
           </div>
         </div>
         <div
-          className="flex justify-center items-center bg-lime-500 font-bold py-[100px] text-white rounded-[20px]"
+          className="flex justify-center items-center bg-lime-500 font-bold py-[100px] text-white rounded-[20px] mt-[50px]"
           data-aos="fade-up"
           data-aos-delay="50"
           data-aos-easing="easing-in-out"
@@ -122,9 +139,10 @@ function App() {
           </div>
         </div>
         <div
-          className="flex justify-center items-center"
+          className="flex justify-center items-center my-[100px]"
           data-aos="fade-up"
           data-aos-delay="50"
+          data-aos-duration="1000"
           data-aos-easing="easing-in-out"
         >
           <a
@@ -136,29 +154,35 @@ function App() {
             <CloudDownloadOutlinedIcon />
           </a>
         </div>
-        <div
-          className="flex flex-row justify-center items-center gap-5"
-          data-aos="fade-up"
-          data-aos-delay="50"
-          data-aos-easing="easing-in-out"
-        >
-          {benefits.map((item) => {
-            return (
-              <div className="w-[30%] h-[200px] border-2">
-                <div>
-                  <img src={item.img} alt="" />
+        <div className="flex flex-col justify-center items-center gap-5 bg-emerald-300 py-0 rounded-lg">
+          <div className="w-full relative flex flex-col justify-center items-center my-0 mb-[100px]">
+            <div className="w-full h-[5px] bg-blue-500 absolute z-10"></div>
+            <div className="z-20 rounded-full absoulte bg-blue-500 inline font-bold text-5xl text-white px-[150px] py-[20px]">
+              ベネフィット領域
+            </div>
+          </div>
+          <div className="w-[70%] flex flex-row flex-wrap justify-center items-center gap-8">
+            {benefits.map((item, index) => {
+              return (
+                <div
+                  data-aos="fade-up"
+                  data-aos-delay={100 * index}
+                  data-aos-easing="easing-in-out"
+                >
+                  <BenefitCard item={item} />
                 </div>
-                <div>{item.contents}</div>
-              </div>
-            );
-          })}
+              );
+            })}
+          </div>
         </div>
 
         <div>
           <div className="flex flex-col justify-center items-center py-[100px]">
             <div className="w-full relative flex flex-col justify-center items-center my-[50px]">
               <div className="w-full h-[5px] bg-blue-500 absolute z-10"></div>
-              <div className="z-20 rounded-full absoulte bg-blue-500 inline font-bold text-5xl text-white px-[150px] py-[20px]">導入実績領域</div>
+              <div className="z-20 rounded-full absoulte bg-blue-500 inline font-bold text-5xl text-white px-[150px] py-[20px]">
+                導入実績領域
+              </div>
             </div>
             <div className="flex flex-row justify-center items-center flex-wrap w-[70%] gap-5">
               {feebackPlace.map((place, index) => {
@@ -166,7 +190,7 @@ function App() {
                   <>
                     <div
                       data-aos="fade-up"
-                      data-aos-delay={50*index}
+                      data-aos-delay={50 * index}
                       data-aos-easing="easing-in-out"
                       className="w-[400px] font-bold text-3xl text-emerald-600"
                     >
@@ -214,7 +238,7 @@ function App() {
           <div className="absolute bottom-0 rounded-t-full bg-white w-[60%] h-[30px]"></div>
         </div>
 
-        <div className="w-full flex flex-col jusify-center items-center pb-[50px] gap-7">
+        <div className="w-full flex flex-col jusify-center items-center pb-[50px] gap-7 bg-gray-300">
           <div className="w-full h-[3px] bg-lime-500 mb-[50px]"></div>
           <a
             href="http://www.ctie.co.jp/index.html"
