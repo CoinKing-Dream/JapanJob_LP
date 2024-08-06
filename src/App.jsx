@@ -5,6 +5,7 @@ import "./App.css";
 import DoneOutlineOutlinedIcon from "@mui/icons-material/DoneOutlineOutlined";
 import ForwardToInboxOutlinedIcon from "@mui/icons-material/ForwardToInboxOutlined";
 import BrowserUpdatedTwoToneIcon from "@mui/icons-material/BrowserUpdatedTwoTone";
+import AddLocationAltTwoToneIcon from "@mui/icons-material/AddLocationAltTwoTone";
 import BenefitCard from "./componenets/FeedbackCard";
 
 import brochureImg from "./assets/img/brochure-btn-img.png";
@@ -166,7 +167,7 @@ function App() {
             </a>
           </div>
         </div>
-        <div className="w-full flex flex-col justify-center items-center gap-5 bg-emerald-300 py-[50px] rounded-lg">
+        <div className="w-full flex flex-col justify-center items-center gap-5 bg-gray-200 py-[50px] rounded-lg">
           {/* <div className="w-full relative flex flex-col justify-center items-center my-0 mb-[100px]">
             <div className="w-full h-[5px] bg-blue-500 absolute z-10"></div>
             <div className="z-20 rounded-full absoulte bg-blue-500 inline font-bold text-5xl text-white px-[150px] py-[20px]">
@@ -196,8 +197,8 @@ function App() {
               data-aos-delay="50"
               data-aos-easing="easing-in-out"
             >
-              <div className="w-full h-[5px] bg-lime-500 absolute z-10"></div>
-              <div className="z-20 rounded-full absoulte bg-lime-600 inline font-bold text-5xl text-white px-[150px] py-[20px]">
+              <div className="w-full h-[5px] bg-lime-300 absolute z-10"></div>
+              <div className="z-20 rounded-full absoulte bg-lime-500 inline font-bold text-5xl text-white px-[150px] py-[20px]">
                 導入実績領域
               </div>
             </div>
@@ -211,7 +212,10 @@ function App() {
                       data-aos-easing="easing-in-out"
                       className="w-[400px] font-bold text-3xl text-emerald-600"
                     >
-                      {place}
+                      <div className="flex flex-row justify-start items-center gap-3">
+                        <AddLocationAltTwoToneIcon color="warning"/>
+                        <div>{place}</div>
+                      </div>
                     </div>
                   </>
                 );
