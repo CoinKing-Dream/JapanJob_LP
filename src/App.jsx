@@ -93,7 +93,7 @@ function App() {
             </div>
           </div>
           <div
-            className="text-7xl text-center"
+            className="text-center text-6xl lg:text-7xl"
             data-aos="fade-up"
             data-aos-delay="50"
             data-aos-easing="easing-in-out"
@@ -101,27 +101,27 @@ function App() {
             自治体防災担当者の方へ
           </div>
           <div
-            className="text-2xl text-center"
+            className="text-center text-xl lg:text-2xl"
             data-aos="fade-up"
             data-aos-delay="150"
             data-aos-easing="easing-in-out"
           >
-            水災害リスクをまるごと監視！あらゆる情報をRisKmaに
+            水災害リスクをまるごと監視！ あらゆる情報をRisKmaに
           </div>
         </div>
-        <div className="flex flex-col justify-center items-center gap-8 my-[100px]">
+        <div className="flex flex-col justify-center items-center gap-8 my-[60px] lg:my-[100px]">
           <div
-            className="text-5xl font-bold text-center underline decoration-wavy underline-offset-8 text-violet-800"
+            className="text-4xl lg:text-5xl font-bold text-center underline decoration-wavy underline-offset-8 text-violet-800"
             data-aos="fade-up"
             data-aos-delay="50"
             data-aos-easing="easing-in-out"
           >
             {sympathetic.question}
           </div>
-          <div className="w-[550px]">
+          <div className="w-[450px] lg:w-[550px]">
             {sympathetic.answer.map((item, index) => (
               <div
-                className="flex flex-row justify-left items-center gap-3 my-3 text-3xl"
+                className="flex flex-row justify-left items-center gap-3 my-3 text-2xl lg:text-3xl"
                 data-aos="fade-up"
                 data-aos-delay={index * 100}
                 data-aos-easing="easing-in-out"
@@ -133,13 +133,13 @@ function App() {
           </div>
         </div>
         <div
-          className="flex justify-center items-center bg-lime-500 font-bold py-[100px] text-white rounded-[20px] mt-[50px]"
+          className="flex justify-center items-center bg-lime-500 font-bold text-white rounded-[20px] py-[50px] lg:py-[100px] mt-[10px] lg:mt-[50px]"
           data-aos="flip-down"
           data-aos-delay="100"
           data-aos-duration="1000"
           data-aos-easing="easing-in-out"
         >
-          <div className="w-[50%] text-3xl leading-10">
+          <div className="w-[50%] text-2xl lg:text-3xl leading-10">
             (株)建設技術研究所の水災害リスクマッピングシステム「RisKma」なら、気象
             庁の予測雨量、キキクル、注意報警報や、国・都道府県の河川水位、雨量計、
             監視カメラの情報をすべて同じ画面で確認できます。またすでに設置の観測機
@@ -162,7 +162,7 @@ function App() {
             <a
               href={riskmaPDF}
               target="_blank"
-              className="w-[100%] pl-[300px] pr-[50px] py-[20px] rounded-full text-4xl font-bold text-white duration-500 bg-emerald-500 hover:bg-emerald-900 hover:text-white"
+              className="w-[100%] pl-[300px] pr-[50px] py-[20px] rounded-full text-3xl lg:text-4xl font-bold text-white duration-500 bg-emerald-500 hover:bg-emerald-900 hover:text-white"
             >
               <span>パンフレットのダウンロードはこちら！</span>
               <BrowserUpdatedTwoToneIcon
@@ -218,7 +218,7 @@ function App() {
                       className="w-[400px] font-bold text-3xl text-emerald-600"
                     >
                       <div className="flex flex-row justify-start items-center gap-3">
-                        <AddLocationAltTwoToneIcon color="warning"/>
+                        <AddLocationAltTwoToneIcon color="warning" />
                         <div>{place}</div>
                       </div>
                     </div>
@@ -269,7 +269,12 @@ function App() {
           <div className="absolute bottom-0 rounded-t-full bg-white w-[60%] h-[30px]"></div>
         </div>
 
-        <div className="w-full flex flex-col jusify-center items-center py-[50px] gap-7 bg-gray-100">
+        <div
+          className="w-full flex flex-col jusify-center items-center py-[50px] gap-7 bg-gray-100"
+          data-aos="fade-up"
+          data-aos-delay="50"
+          data-aos-easing="easing-in-out"
+        >
           <a
             href="http://www.ctie.co.jp/index.html"
             className="hover:opacity-60"
