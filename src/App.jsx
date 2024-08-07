@@ -75,14 +75,32 @@ function App() {
   ];
 
   useEffect(() => {
-    AOS.init();
+    AOS.init({
+      disable: false, // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
+      startEvent: "DOMContentLoaded", // name of the event dispatched on the document, that AOS should initialize on
+      initClassName: "aos-init", // class applied after initialization
+      animatedClassName: "aos-animate", // class applied on animation
+      useClassNames: false, // if true, will add content of `data-aos` as classes on scroll
+      disableMutationObserver: false, // disables automatic mutations' detections (advanced)
+      debounceDelay: 50, // the delay on debounce used while resizing window (advanced)
+      throttleDelay: 99, // the delay on throttle used while scrolling the page (advanced)
+
+      // Settings that can be overridden on per-element basis, by `data-aos-*` attributes:
+      offset: 120, // offset (in px) from the original trigger point
+      delay: 0, // values from 0 to 3000, with step 50ms
+      duration: 400, // values from 0 to 3000, with step 50ms
+      easing: "ease", // default easing for AOS animations
+      once: false, // whether animation should happen only once - while scrolling down
+      mirror: false, // whether elements should animate out while scrolling past them
+      anchorPlacement: "top-bottom", // defines which position of the element regarding to window should trigger the animation
+    });
     AOS.refresh();
   }, []);
 
   return (
-    <div className="w-full flex justify-center items-center">
-      <div className="w-full flex flex-col">
-        <div className="sky-background flex flex-col justify-center items-center gap-12 text-white pt-[100px] pb-[150px] md:pb-[200px] relative rounded-b-lg">
+    <div className="w-full flex flex-col justify-center items-center">
+      <div className="overflow-hidden w-full">
+        <div className="w-full sky-background flex flex-col justify-center items-center gap-12 text-white pt-[100px] pb-[150px] md:pb-[200px] relative rounded-b-lg">
           <div className="absolute bg-white w-[60%] h-[50px] bottom-[-5px] rounded-t-full"></div>
           <div className="w-full px-[100px] lg:px-[200px] pb-[50px] relative">
             <div className="w-[200px] flex flex-col jusity-center items-center">
@@ -109,7 +127,7 @@ function App() {
             水災害リスクをまるごと監視！ あらゆる情報をRisKmaに
           </div>
         </div>
-        <div className="flex flex-col justify-center items-center gap-8 my-[60px] lg:my-[100px]">
+        <div className="w-full flex flex-col justify-center items-center gap-8 my-[60px] lg:my-[100px]">
           <div
             className="text-4xl lg:text-5xl font-bold text-center underline decoration-wavy underline-offset-8 text-violet-800"
             data-aos="fade-up"
@@ -133,13 +151,14 @@ function App() {
           </div>
         </div>
         <div
-          className="flex justify-center items-center bg-lime-500 font-bold text-white rounded-[20px] py-[50px] lg:py-[100px] mt-[10px] lg:mt-[50px]"
+          className="overflow-hidden flex justify-center items-center bg-lime-500 font-bold text-white rounded-[20px] py-[50px] lg:py-[100px] mt-[10px] lg:mt-[50px]"
           data-aos="flip-down"
           data-aos-delay="100"
           data-aos-duration="1000"
           data-aos-easing="easing-in-out"
+          data-aos-anchor-placement="left-top"
         >
-          <div className="w-[80%] md:w-[50%] text-xl md:text-2xl lg:text-3xl leading-10">
+          <div className="w-[80%] md:w-[50%] text-xl md:text-2xl lg:text-3xl leading-10 overflow-hidden">
             (株)建設技術研究所の水災害リスクマッピングシステム「RisKma」なら、気象
             庁の予測雨量、キキクル、注意報警報や、国・都道府県の河川水位、雨量計、
             監視カメラの情報をすべて同じ画面で確認できます。またすでに設置の観測機
@@ -195,7 +214,7 @@ function App() {
         </div>
 
         <div>
-          <div className="flex flex-col justify-center items-center pb-[100px]">
+          <div className="flex flex-col justify-center items-center pb-[100px] overflow-hidden">
             <div
               className="w-full relative flex flex-col justify-center items-center my-[50px] hover:opacity-90 duration-500"
               data-aos="flip-up"
