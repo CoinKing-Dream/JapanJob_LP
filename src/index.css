@@ -33,5 +33,6 @@ body, html {
   padding: 0 !important;
   width: 100%;
   max-width: 100vw !important;
+  min-width: 340px !important;
 }
 

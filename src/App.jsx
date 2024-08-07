@@ -100,18 +100,22 @@ function App() {
   return (
     <div className="w-full flex flex-col justify-center items-center">
       <div className="overflow-hidden w-full">
-        <div className="w-full sky-background flex flex-col justify-center items-center gap-12 text-white pt-[100px] pb-[150px] md:pb-[200px] relative rounded-b-lg">
+        <div className="w-full sky-background flex flex-col justify-center items-center gap-5 text-white pt-[50px] sm:pt-[100px] pb-[150px] md:pb-[200px] relative rounded-b-lg">
           <div className="absolute bg-white w-[60%] h-[50px] bottom-[-5px] rounded-t-full"></div>
-          <div className="w-full px-[100px] lg:px-[200px] pb-[50px] relative">
+          <div className="w-full px-[0px] sm:px-[50px] md:px-[100px] lg:px-[200px] pb-[50px] relative">
             <div className="w-[200px] flex flex-col jusity-center items-center">
               <a href="" className="logo-animation">
-                <img width="200" src={logo} alt="Logo"></img>
+                <img
+                  src={logo}
+                  alt="Logo"
+                  className="w-[100px] sm:w-[150px] md:w-[200px]"
+                ></img>
               </a>
               <div className="bg-gray-300 w-[100px] h-[30px] logo-shadow-animation"></div>
             </div>
           </div>
           <div
-            className="text-center text-5xl md:text-6xl lg:text-7xl"
+            className="text-center text-[2em] sm:text-5xl md:text-6xl lg:text-7xl"
             data-aos="fade-up"
             data-aos-delay="50"
             data-aos-easing="easing-in-out"
@@ -119,7 +123,7 @@ function App() {
             自治体防災担当者の方へ
           </div>
           <div
-            className="text-center text-xl lg:text-2xl"
+            className="text-center text-sm sm:text-xl lg:text-2xl"
             data-aos="fade-up"
             data-aos-delay="150"
             data-aos-easing="easing-in-out"
@@ -129,17 +133,17 @@ function App() {
         </div>
         <div className="w-full flex flex-col justify-center items-center gap-8 my-[60px] lg:my-[100px]">
           <div
-            className="text-4xl lg:text-5xl font-bold text-center underline decoration-wavy underline-offset-8 text-violet-800"
+            className="text-2xl sm:text-4xl lg:text-5xl font-bold text-center underline decoration-wavy underline-offset-8 text-violet-800"
             data-aos="fade-up"
             data-aos-delay="50"
             data-aos-easing="easing-in-out"
           >
             {sympathetic.question}
           </div>
-          <div className="w-[450px] lg:w-[550px]">
+          <div className="w-[350px] sm:w-[450px] lg:w-[550px]">
             {sympathetic.answer.map((item, index) => (
               <div
-                className="flex flex-row justify-left items-center gap-3 my-3 text-2xl lg:text-3xl"
+                className="flex flex-row justify-left items-center gap-3 my-3 text-lg sm:text-2xl lg:text-3xl"
                 data-aos="fade-up"
                 data-aos-delay={index * 100}
                 data-aos-easing="easing-in-out"
@@ -158,7 +162,7 @@ function App() {
           data-aos-easing="easing-in-out"
           data-aos-anchor-placement="left-top"
         >
-          <div className="w-[80%] md:w-[50%] text-xl md:text-2xl lg:text-3xl leading-10 overflow-hidden">
+          <div className="w-[80%] md:w-[50%] text-sm sm:text-xl md:text-2xl lg:text-3xl leading-5 sm:leading-10 overflow-hidden">
             (株)建設技術研究所の水災害リスクマッピングシステム「RisKma」なら、気象
             庁の予測雨量、キキクル、注意報警報や、国・都道府県の河川水位、雨量計、
             監視カメラの情報をすべて同じ画面で確認できます。またすでに設置の観測機
@@ -166,22 +170,21 @@ function App() {
           </div>
         </div>
         <div
-          className="flex justify-center items-center h-[300px] lg:h-[400px]"
+          className="flex justify-center items-center h-[200px] sm:h-[300px] lg:h-[400px]"
           data-aos="slide-up"
           data-aos-delay="50"
           data-aos-duration="500"
           data-aos-easing="easing-in-out"
         >
-          <div className="flex justify-center items-center min-w-[650px] max-w-[800px] w-[60%] h-[400px] relative">
+          <div className="flex justify-center items-center sm:min-w-[600px] md:min-w-[650px] max-w-[800px] w-[90%] sm:w-[60%] h-[250px] sm:h-[400px] relative">
             <img
               src={brochureImg}
-              className="absolute top-[80px] left-[50px]"
-              width={200}
+              className="absolute invisible sm:visible top-[120px] md:top-[80px] left-[50px] w-[150px] md:w-[200px]"
             ></img>
             <a
               href={riskmaPDF}
               target="_blank"
-              className="w-[100%] pl-[250px] md:pl-[270px] pr-[50px] py-[20px] rounded-full text-2xl md:text-3xl lg:text-4xl font-bold text-white duration-500 bg-emerald-500 hover:bg-emerald-900 hover:text-white"
+              className="w-[100%] pl-[50px] sm:pl-[220px] md:pl-[270px] pr-[50px] py-[20px] rounded-full text-xl md:text-3xl lg:text-4xl font-bold text-white duration-500 bg-emerald-500 hover:bg-emerald-900 hover:text-white"
             >
               <span>パンフレットのダウンロードはこちら！</span>
               <BrowserUpdatedTwoToneIcon
@@ -191,14 +194,14 @@ function App() {
             </a>
           </div>
         </div>
-        <div className="w-full flex justify-center items-center gap-5 bg-gray-200 py-[50px] rounded-lg">
+        <div className="min-w-[350px] w-full flex justify-center items-center gap-5 bg-gray-200 py-[50px] rounded-lg">
           {/* <div className="w-full relative flex flex-col justify-center items-center my-0 mb-[100px]">
             <div className="w-full h-[5px] bg-blue-500 absolute z-10"></div>
             <div className="z-20 rounded-full absoulte bg-blue-500 inline font-bold text-5xl text-white px-[150px] py-[20px]">
               ベネフィット領域
             </div>
           </div> */}
-          <div className="w-[70%] min-w-[350px] flex flex-row flex-wrap justify-center items-center gap-8">
+          <div className="w-[70%] flex flex-row flex-wrap justify-center items-center gap-[30px] sm:gap-8">
             {benefits.map((item, index) => {
               return (
                 <div
@@ -214,15 +217,15 @@ function App() {
         </div>
 
         <div>
-          <div className="flex flex-col justify-center items-center pb-[100px] overflow-hidden">
+          <div className="flex flex-col justify-center items-center pb-[50px] sm:pb-[100px] overflow-hidden">
             <div
-              className="w-full relative flex flex-col justify-center items-center my-[50px] hover:opacity-90 duration-500"
+              className="w-full relative flex flex-col justify-center items-center my-[20px] sm:my-[50px] hover:opacity-90 duration-500"
               data-aos="flip-up"
               data-aos-delay="50"
               data-aos-easing="easing-in-out"
             >
               <div className="w-full h-[5px] bg-lime-300 absolute z-10"></div>
-              <div className="z-20 rounded-full absoulte bg-lime-500 inline font-bold text-3xl md:text-5xl text-white px-[100px] md:px-[150px] py-[20px]">
+              <div className="z-20 rounded-full absoulte bg-lime-500 inline font-bold text-xl sm:text-3xl md:text-5xl text-white px-[50px] sm:px-[100px] md:px-[150px] py-[20px]">
                 導入実績領域
               </div>
             </div>
@@ -234,7 +237,7 @@ function App() {
                       data-aos="fade-up"
                       data-aos-delay={50 * index}
                       data-aos-easing="easing-in-out"
-                      className="min-w-[300px] font-bold text-3xl text-emerald-600"
+                      className="min-w-[300px] font-bold text-2xl sm:text-3xl text-emerald-600"
                     >
                       <div className="flex flex-row justify-start items-center gap-3">
                         <AddLocationAltTwoToneIcon color="warning" />
@@ -249,7 +252,7 @@ function App() {
         </div>
 
         <div
-          className="w-full text-center bg-sky-500 text-white py-[50px] flex flex-col justify-center items-center relative hover:bg-sky-400"
+          className="w-full text-center bg-sky-500 text-white py-[30px] sm:py-[50px] flex flex-col justify-center items-center relative hover:bg-sky-400"
           data-aos="fade-up"
           data-aos-delay="50"
           data-aos-easing="easing-in-out"
@@ -264,22 +267,22 @@ function App() {
               <div className="flex flex-row justify-center items-center gap-3 text-white">
                 <ForwardToInboxOutlinedIcon
                   fontSize="large"
-                  className="email-animation"
+                  className="email-animation invisible sm:visible"
                 />
                 <div>
                   <div>
-                    <span className="text-base sm:text-xl lg:text-2xl font-bold">
+                    <span className="text-base sm:text-base md:text-xl lg:text-2xl font-bold">
                       （株）建設技術研究所の
                     </span>
-                    <span className="text-xl sm:text-2xl lg:text-3xl font-bold">
+                    <span className="text-xl sm:text-xl md:text-2xl lg:text-3xl font-bold">
                       IoT監視観測パッケージ「みるわん」{" "}
                     </span>
                   </div>
                   <div>
-                    <span className="font-bold text-4xl underline">
+                    <span className="font-bold text-2xl md:text-4xl underline">
                       お問い合わせ・お見積り
                     </span>
-                    <span className="text-xl font-bold">はこちらから！ </span>
+                    <span className="text-lg sm:text-base md:text-xl font-bold">はこちらから！ </span>
                   </div>
                 </div>
               </div>
@@ -298,9 +301,9 @@ function App() {
             href="http://www.ctie.co.jp/index.html"
             className="hover:opacity-60"
           >
-            <img src={CTIlogo} width={400} height={20}></img>
+            <img src={CTIlogo} className="w-[300px] sm:w-[300px]"></img>
           </a>
-          <div className="flex flex-col justify-center items-center">
+          <div className="flex flex-col justify-center items-center text-sm sm:text-base">
             <div>Copyright RisKma - All Rights Reserved. </div>
             <div>「RisKma」は株式会社建設技術研究所の登録商標です。</div>
           </div>
