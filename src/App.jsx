@@ -82,9 +82,9 @@ function App() {
   return (
     <div className="w-full flex justify-center items-center">
       <div className="w-full flex flex-col">
-        <div className="sky-background flex flex-col justify-center items-center gap-12 text-white pt-[100px] pb-[200px] relative rounded-b-lg">
-          <div className="absolute bg-white w-[60%] h-[50px] bottom-0 rounded-t-full"></div>
-          <div className="w-full px-[200px] pb-[50px] ">
+        <div className="sky-background flex flex-col justify-center items-center gap-12 text-white pt-[100px] pb-[150px] md:pb-[200px] relative rounded-b-lg">
+          <div className="absolute bg-white w-[60%] h-[50px] bottom-[-5px] rounded-t-full"></div>
+          <div className="w-full px-[100px] lg:px-[200px] pb-[50px] relative">
             <div className="w-[200px] flex flex-col jusity-center items-center">
               <a href="" className="logo-animation">
                 <img width="200" src={logo} alt="Logo"></img>
@@ -93,7 +93,7 @@ function App() {
             </div>
           </div>
           <div
-            className="text-center text-6xl lg:text-7xl"
+            className="text-center text-5xl md:text-6xl lg:text-7xl"
             data-aos="fade-up"
             data-aos-delay="50"
             data-aos-easing="easing-in-out"
@@ -147,7 +147,7 @@ function App() {
           </div>
         </div>
         <div
-          className="flex justify-center items-center h-[400px]"
+          className="flex justify-center items-center h-[300px] lg:h-[400px]"
           data-aos="slide-up"
           data-aos-delay="50"
           data-aos-duration="500"
@@ -179,7 +179,7 @@ function App() {
               ベネフィット領域
             </div>
           </div> */}
-          <div className="w-[70%] flex flex-row flex-wrap justify-center items-center gap-8">
+          <div className="w-[70%] min-w-[350px] flex flex-row flex-wrap justify-center items-center gap-8">
             {benefits.map((item, index) => {
               return (
                 <div
@@ -235,7 +235,7 @@ function App() {
           data-aos-delay="50"
           data-aos-easing="easing-in-out"
         >
-          <div className="absolute top-0 rounded-b-[40px] bg-white w-[60%] h-[30px]"></div>
+          <div className="absolute top-[-3px] rounded-b-[40px] bg-white w-[60%] h-[30px]"></div>
           <div className="my-12">
             <a
               href="https://www.cti-rains.net/mailform/form_miruone.html"
@@ -249,10 +249,10 @@ function App() {
                 />
                 <div>
                   <div>
-                    <span className="text-2xl font-bold">
+                    <span className="text-base sm:text-xl lg:text-2xl font-bold">
                       （株）建設技術研究所の
                     </span>
-                    <span className="text-3xl">
+                    <span className="text-xl sm:text-2xl lg:text-3xl font-bold">
                       IoT監視観測パッケージ「みるわん」{" "}
                     </span>
                   </div>
@@ -260,13 +260,13 @@ function App() {
                     <span className="font-bold text-4xl underline">
                       お問い合わせ・お見積り
                     </span>
-                    <span className="text-xl font-bold">はこちら </span>
+                    <span className="text-xl font-bold">はこちらから！ </span>
                   </div>
                 </div>
               </div>
             </a>
           </div>
-          <div className="absolute bottom-0 rounded-t-full bg-white w-[60%] h-[30px]"></div>
+          <div className="absolute bottom-[-3px] rounded-t-full bg-white w-[60%] h-[30px]"></div>
         </div>
 
         <div
