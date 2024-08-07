@@ -139,7 +139,7 @@ function App() {
           data-aos-duration="1000"
           data-aos-easing="easing-in-out"
         >
-          <div className="w-[50%] text-2xl lg:text-3xl leading-10">
+          <div className="w-[80%] md:w-[50%] text-xl md:text-2xl lg:text-3xl leading-10">
             (株)建設技術研究所の水災害リスクマッピングシステム「RisKma」なら、気象
             庁の予測雨量、キキクル、注意報警報や、国・都道府県の河川水位、雨量計、
             監視カメラの情報をすべて同じ画面で確認できます。またすでに設置の観測機
@@ -153,7 +153,7 @@ function App() {
           data-aos-duration="500"
           data-aos-easing="easing-in-out"
         >
-          <div className="flex justify-center items-center max-w-[800px] w-[60%] h-[400px] relative">
+          <div className="flex justify-center items-center min-w-[650px] max-w-[800px] w-[60%] h-[400px] relative">
             <img
               src={brochureImg}
               className="absolute top-[80px] left-[50px]"
@@ -162,7 +162,7 @@ function App() {
             <a
               href={riskmaPDF}
               target="_blank"
-              className="w-[100%] pl-[300px] pr-[50px] py-[20px] rounded-full text-3xl lg:text-4xl font-bold text-white duration-500 bg-emerald-500 hover:bg-emerald-900 hover:text-white"
+              className="w-[100%] pl-[250px] md:pl-[270px] pr-[50px] py-[20px] rounded-full text-2xl md:text-3xl lg:text-4xl font-bold text-white duration-500 bg-emerald-500 hover:bg-emerald-900 hover:text-white"
             >
               <span>パンフレットのダウンロードはこちら！</span>
               <BrowserUpdatedTwoToneIcon
@@ -172,7 +172,7 @@ function App() {
             </a>
           </div>
         </div>
-        <div className="w-full flex flex-col justify-center items-center gap-5 bg-gray-200 py-[50px] rounded-lg">
+        <div className="w-full flex justify-center items-center gap-5 bg-gray-200 py-[50px] rounded-lg">
           {/* <div className="w-full relative flex flex-col justify-center items-center my-0 mb-[100px]">
             <div className="w-full h-[5px] bg-blue-500 absolute z-10"></div>
             <div className="z-20 rounded-full absoulte bg-blue-500 inline font-bold text-5xl text-white px-[150px] py-[20px]">
@@ -203,11 +203,11 @@ function App() {
               data-aos-easing="easing-in-out"
             >
               <div className="w-full h-[5px] bg-lime-300 absolute z-10"></div>
-              <div className="z-20 rounded-full absoulte bg-lime-500 inline font-bold text-5xl text-white px-[150px] py-[20px]">
+              <div className="z-20 rounded-full absoulte bg-lime-500 inline font-bold text-3xl md:text-5xl text-white px-[100px] md:px-[150px] py-[20px]">
                 導入実績領域
               </div>
             </div>
-            <div className="flex flex-row justify-center items-center flex-wrap w-[70%] gap-5">
+            <div className="flex flex-row justify-center items-center flex-wrap w-[90%] lg:w-[70%] gap-2 md:gap-5">
               {feebackPlace.map((place, index) => {
                 return (
                   <>
@@ -215,7 +215,7 @@ function App() {
                       data-aos="fade-up"
                       data-aos-delay={50 * index}
                       data-aos-easing="easing-in-out"
-                      className="w-[400px] font-bold text-3xl text-emerald-600"
+                      className="min-w-[300px] font-bold text-3xl text-emerald-600"
                     >
                       <div className="flex flex-row justify-start items-center gap-3">
                         <AddLocationAltTwoToneIcon color="warning" />
