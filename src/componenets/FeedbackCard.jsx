@@ -1,17 +1,12 @@
 const BenefitCard = ({ item, index }) => {
   return (
     <>
-      <div className="shadow-lg shadow-cyan-500/100 w-[350px] h-[350px] sm:w-[400px] sm:h-[350px] relative rounded-lg">
-        <img
-          src={item.img}
-          alt={item.img}
-          className="object-fill w-[350px] h-[300px] sm:w-[400px] sm:h-[300px] z-10"
-        ></img>
-        <div className="w-[100%] flex justify-center items-center text-xl font-bold h-[50px] bg-white rounded-b-lg">
-          {item.title}
+      <div className="divide-y-2 divide-dashed  divide-blue-200 flex flex-col justify-center items-center shadow-lg shadow-cyan-500/100 w-[350px] h-[350px] sm:w-[400px] sm:h-[350px] rounded-lg">
+        <div className="flex w-[350px] h-[350px] sm:w-[400px] sm:h-[350px] z-100 items-center justify-center text-center duration-500 bg-white text-lime-600 hover:opacity-80 hover:cursor-pointer hover:bg-gray-600 hover:text-white duration-700">
+          <div className="w-[300px] font-black text-3xl">{item.contents}</div>
         </div>
-        <div className="flex w-[350px] h-[350px] sm:w-[400px] sm:h-[350px] z-100 items-center justify-center opacity-0 absolute top-0 text-center duration-500 hover:bg-gray-800 hover:text-white hover:cursor-pointer hover:opacity-80">
-          <div className="w-[300px] font-black text-xl">{item.contents}</div>
+        <div className="w-[100%] flex justify-center items-center text-2xl font-bold h-[80px] bg-white rounded-b-lg">
+          {item.title}
         </div>
       </div>
     </>

@@ -17,6 +17,7 @@ import expManImg from "./assets/img/explanation_man.svg";
 import expWomanImg from "./assets/img/explanation_woman.svg";
 
 import riskmaLogo from "./assets/img/Logo_riskma.png";
+import benefitImg from "./assets/img/benefit-img.png";
 import benefitFirImg from "./assets/img/1_map.png";
 import benefitSecImg from "./assets/img/2_service.png";
 import benefitThiImg from "./assets/img/3_mirone.png";
@@ -119,7 +120,7 @@ function App() {
             </div>
           </div>
           <div
-            className="w-full flex justify-end px-[200px] absolute top-[100px]"
+            className="w-full flex justify-end px-[400px] absolute top-[100px]"
             data-aos="fade-up"
             data-aos-delay="50"
             data-aos-easing="easing-in-out"
@@ -156,7 +157,7 @@ function App() {
           </div>
         </div>
         <div
-          className="overflow-hidden flex justify-center items-center bg-lime-500 font-bold text-white rounded-[20px] py-[50px] lg:py-[100px] mt-[10px] lg:mt-[50px]"
+          className="shadow-lg shadow-cyan-500/100 overflow-hidden flex justify-center items-center bg-lime-500 font-bold text-white rounded-[20px] py-[50px] lg:py-[100px] mt-[10px] lg:mt-[50px]"
           data-aos="flip-down"
           data-aos-delay="100"
           data-aos-duration="1000"
@@ -181,7 +182,7 @@ function App() {
             <a
               href={riskmaPDF}
               target="_blank"
-              className="w-[100%] px-[80px] py-[20px] rounded-full text-center  text-3xl md:text-4xl lg:text-5xl font-bold text-white duration-500 bg-emerald-500 hover:bg-emerald-900 hover:text-white"
+              className="shadow-lg shadow-lime-500/100 w-[100%] px-[80px] py-[20px] rounded-full text-center  text-3xl md:text-4xl lg:text-5xl font-bold text-white duration-500 bg-emerald-500 hover:bg-emerald-900 hover:text-white"
             >
               <span className="leading-snug">
                 パンフレットのダウンロードは
@@ -195,13 +196,20 @@ function App() {
             </a>
           </div>
         </div>
-        <div className="min-w-[350px] w-full flex justify-center items-center gap-5 bg-gray-200 py-[50px] rounded-lg">
-          {/* <div className="w-full relative flex flex-col justify-center items-center my-0 mb-[100px]">
-            <div className="w-full h-[5px] bg-blue-500 absolute z-10"></div>
-            <div className="z-20 rounded-full absoulte bg-blue-500 inline font-bold text-5xl text-white px-[150px] py-[20px]">
-              ベネフィット領域
-            </div>
-          </div> */}
+        <div
+          data-aos="fade-up"
+          data-aos-duration="1000"
+          data-aos-easing="easing-in-out"
+          className="flex flex-col justify-center items-center min-w-[350px] w-full flex justify-center items-center bg-gray-200 rounded-lg relative mt-[60px] pb-[50px] rounded-lg"
+        >
+          <div
+            className="w-full relative flex flex-col justify-center items-center my-0 absolute top-[-70px]"
+            data-aos="zoom-in"
+            data-aos-duration="1000"
+            data-aos-easing="easing-in-out"
+          >
+            <img src={benefitImg} className="w-[800px]" />
+          </div>
           <div className="w-[70%] flex flex-row flex-wrap justify-center items-center gap-[30px] sm:gap-8">
             {benefits.map((item, index) => {
               return (
@@ -265,10 +273,10 @@ function App() {
               target="_blank"
               className="px-30px py-15px w-[100px] bg-red-500 inline"
             >
-              <div className="flex flex-row justify-center items-center gap-3 text-white">
+              <div className="flex flex-row justify-center items-center gap-3 text-zinc-200">
                 <ForwardToInboxOutlinedIcon
                   fontSize="large"
-                  className="email-animation invisible sm:visible"
+                  className="email-animation invisible sm:visible text-white"
                 />
                 <div>
                   <div>
@@ -280,7 +288,7 @@ function App() {
                     </span>
                   </div>
                   <div>
-                    <span className="font-bold text-2xl md:text-4xl underline text-zinc-300">
+                    <span className="font-bold text-2xl md:text-4xl underline text-white">
                       お問い合わせ・お見積り
                     </span>
                     <span className="text-lg sm:text-base md:text-xl font-bold">
@@ -311,7 +319,7 @@ function App() {
               href="https://riskma.net"
               className="hover:opacity-60 duration-200"
             >
-              <img src={footer} className="w-[100px]"></img>
+              <img src={footer} className="w-[120px]"></img>
             </a>
           </div>
           <div className="flex flex-col justify-center items-center text-sm sm:text-base">
