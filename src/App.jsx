@@ -203,12 +203,13 @@ function App() {
           className="flex flex-col justify-center items-center min-w-[350px] w-full flex justify-center items-center bg-gray-200 rounded-lg relative mt-[60px] pb-[50px] rounded-lg"
         >
           <div
-            className="w-full relative flex flex-col justify-center items-center my-0 absolute top-[-70px]"
+            className="w-full relative flex flex-col justify-center items-center my-0 absolute top-[-40px]"
             data-aos="zoom-in"
             data-aos-duration="1000"
             data-aos-easing="easing-in-out"
           >
-            <img src={benefitImg} className="w-[800px]" />
+            <div className="text-3xl font-bold">「リスクマ」導入の<br/><span className="text-7xl text-blue-500">5</span>つの<span className="text-5xl">メリット</span>
+</div>
           </div>
           <div className="w-[70%] flex flex-row flex-wrap justify-center items-center gap-[30px] sm:gap-8">
             {benefits.map((item, index) => {
