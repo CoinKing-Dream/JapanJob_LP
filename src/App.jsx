@@ -10,9 +10,13 @@ import BenefitCard from "./componenets/FeedbackCard";
 
 import brochureImg from "./assets/img/brochure-btn-img.png";
 import logo from "./assets/img/logo.svg";
+import footer from "./assets/img/footer.png";
 import CTIlogo from "./assets/img/CTI_logo.png";
 import riskmaPDF from "./assets/pdf/RisKma.pdf";
+import expManImg from "./assets/img/explanation_man.svg";
+import expWomanImg from "./assets/img/explanation_woman.svg";
 
+import riskmaLogo from "./assets/img/Logo_riskma.png";
 import benefitFirImg from "./assets/img/1_map.png";
 import benefitSecImg from "./assets/img/2_service.png";
 import benefitThiImg from "./assets/img/3_mirone.png";
@@ -100,9 +104,9 @@ function App() {
   return (
     <div className="w-full flex flex-col justify-center items-center">
       <div className="overflow-hidden w-full">
-        <div className="w-full sky-background flex flex-col justify-center items-center gap-5 text-white pt-[50px] sm:pt-[100px] pb-[150px] md:pb-[200px] relative rounded-b-lg">
+        <div className="w-full sky-background h-[700px] flex flex-col justify-center items-center gap-5 text-white pt-[50px] sm:pt-[100px] pb-[50px] md:pb-[100px] relative rounded-b-lg">
           <div className="absolute bg-white w-[60%] h-[50px] bottom-[-5px] rounded-t-full"></div>
-          <div className="w-full px-[0px] sm:px-[50px] md:px-[100px] lg:px-[200px] pb-[50px] relative">
+          <div className="w-full px-[0px] sm:px-[50px] md:px-[100px] lg:px-[200px] absolute top-[100px] left-0">
             <div className="w-[200px] flex flex-col jusity-center items-center">
               <a href="" className="logo-animation">
                 <img
@@ -115,20 +119,12 @@ function App() {
             </div>
           </div>
           <div
-            className="text-center text-[2em] sm:text-5xl md:text-6xl lg:text-7xl"
+            className="w-full flex justify-end px-[200px] absolute top-[100px]"
             data-aos="fade-up"
             data-aos-delay="50"
             data-aos-easing="easing-in-out"
           >
-            自治体防災担当者の方へ
-          </div>
-          <div
-            className="text-center text-sm sm:text-xl lg:text-2xl"
-            data-aos="fade-up"
-            data-aos-delay="150"
-            data-aos-easing="easing-in-out"
-          >
-            水災害リスクをまるごと監視！ あらゆる情報をRisKmaに
+            <img src={riskmaLogo} className="w-[800px] min-w-[500px]" />
           </div>
         </div>
         <div className="w-full flex flex-col justify-center items-center gap-8 my-[60px] lg:my-[100px]">
@@ -140,16 +136,21 @@ function App() {
           >
             {sympathetic.question}
           </div>
-          <div className="w-[350px] sm:w-[450px] lg:w-[550px]">
+          <div className="flex flex-row justify-center items-center gap-8 mt-10">
             {sympathetic.answer.map((item, index) => (
               <div
-                className="flex flex-row justify-left items-center gap-3 my-3 text-lg sm:text-2xl lg:text-3xl"
+                className="w-[30vw] h-[200px] relative max-w-[400px]"
                 data-aos="fade-up"
                 data-aos-delay={index * 100}
                 data-aos-easing="easing-in-out"
               >
-                <DoneOutlineOutlinedIcon color="success" />
-                <div className="text-blue-800">{item}</div>
+                <div className="z-10 text-3xl w-full h-full border-2 border-cyan-400 shadow-2xl shadow-blue-500/50 rounded-full px-[50px] flex justify-center items-center">
+                  {item}
+                </div>
+                <img
+                  src={index == 1 ? expWomanImg : expManImg}
+                  className="z-100 absolute bottom-[-10px] right-0"
+                />
               </div>
             ))}
           </div>
@@ -176,17 +177,17 @@ function App() {
           data-aos-duration="500"
           data-aos-easing="easing-in-out"
         >
-          <div className="flex justify-center items-center sm:min-w-[600px] md:min-w-[650px] max-w-[800px] w-[90%] sm:w-[60%] h-[250px] sm:h-[400px] relative">
-            <img
-              src={brochureImg}
-              className="absolute invisible sm:visible top-[120px] md:top-[80px] left-[50px] w-[150px] md:w-[200px]"
-            ></img>
+          <div className="flex justify-center items-center sm:min-w-[600px] md:min-w-[650px] max-w-[1000px] w-[90%] sm:w-[60%] h-[250px] sm:h-[400px]">
             <a
               href={riskmaPDF}
               target="_blank"
-              className="w-[100%] pl-[50px] sm:pl-[220px] md:pl-[270px] pr-[50px] py-[20px] rounded-full text-xl md:text-3xl lg:text-4xl font-bold text-white duration-500 bg-emerald-500 hover:bg-emerald-900 hover:text-white"
+              className="w-[100%] px-[80px] py-[20px] rounded-full text-center  text-3xl md:text-4xl lg:text-5xl font-bold text-white duration-500 bg-emerald-500 hover:bg-emerald-900 hover:text-white"
             >
-              <span>パンフレットのダウンロードはこちら！</span>
+              <span className="leading-snug">
+                パンフレットのダウンロードは
+                <br />
+                こちら！
+              </span>
               <BrowserUpdatedTwoToneIcon
                 fontSize="large"
                 className="animate-bounce text-yellow-200"
@@ -275,14 +276,16 @@ function App() {
                       （株）建設技術研究所の
                     </span>
                     <span className="text-xl sm:text-xl md:text-2xl lg:text-3xl font-bold">
-                      IoT監視観測パッケージ「みるわん」{" "}
+                      IoT監視観測パッケージ「リスクマ」{" "}
                     </span>
                   </div>
                   <div>
-                    <span className="font-bold text-2xl md:text-4xl underline">
+                    <span className="font-bold text-2xl md:text-4xl underline text-zinc-300">
                       お問い合わせ・お見積り
                     </span>
-                    <span className="text-lg sm:text-base md:text-xl font-bold">はこちらから！ </span>
+                    <span className="text-lg sm:text-base md:text-xl font-bold">
+                      はこちらから！{" "}
+                    </span>
                   </div>
                 </div>
               </div>
@@ -297,12 +300,20 @@ function App() {
           data-aos-delay="50"
           data-aos-easing="easing-in-out"
         >
-          <a
-            href="http://www.ctie.co.jp/index.html"
-            className="hover:opacity-60"
-          >
-            <img src={CTIlogo} className="w-[300px] sm:w-[300px]"></img>
-          </a>
+          <div className="flex flex-row justify-center items-center gap-6">
+            <a
+              href="https://www.ctie.co.jp/index.html"
+              className="hover:opacity-60 duration-200"
+            >
+              <img src={CTIlogo} className="w-[200px]"></img>
+            </a>
+            <a
+              href="https://riskma.net"
+              className="hover:opacity-60 duration-200"
+            >
+              <img src={footer} className="w-[100px]"></img>
+            </a>
+          </div>
           <div className="flex flex-col justify-center items-center text-sm sm:text-base">
             <div>Copyright RisKma - All Rights Reserved. </div>
             <div>「RisKma」は株式会社建設技術研究所の登録商標です。</div>

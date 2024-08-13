@@ -1,6 +1,7 @@
 .sky-background {
   background-image: url("./assets/img/sky_background.jpg");
   background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .email-animation {
