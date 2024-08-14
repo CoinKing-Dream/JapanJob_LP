@@ -107,9 +107,9 @@ function App() {
   return (
     <div className="w-full flex flex-col justify-center items-center">
       <div className="overflow-hidden w-full">
-        <div className="flex justify-center items-center w-full sky-background h-[700px] text-white pt-[50px] sm:pt-[100px] pb-[50px] md:pb-[100px] relative rounded-b-lg">
+        <div className="flex justify-center items-center w-full sky-background h-[800px] text-white pt-[50px] sm:pt-[100px] pb-[50px] md:pb-[100px] relative rounded-b-lg">
           <div
-            className="absolute left-[100px] top-[100px] z-100"
+            className="absolute left-[100px] top-[170px] z-100"
             data-aos="fade-up"
             data-aos-delay="50"
             data-aos-easing="easing-in-out"
@@ -118,7 +118,7 @@ function App() {
           </div>
 
           <div className="absolute bg-white w-[60%] h-[50px] bottom-[-5px] rounded-t-full"></div>
-          <div className="w-full px-[0px] sm:px-[50px] md:px-[100px] lg:px-[100px] absolute top-[50px] left-0">
+          <div className="w-full px-[0px] sm:px-[50px] md:px-[100px] lg:px-[100px] absolute top-[80px] left-0">
             <div className="w-[200px] flex flex-col jusity-center items-center">
               <a href="" className="logo-animation">
                 <img
@@ -132,12 +132,12 @@ function App() {
           </div>
           
           <div
-            className="right-[200px] absolute top-[100px]"
+            className="right-[50px] absolute top-[170px]"
             data-aos="fade-up"
             data-aos-delay="50"
             data-aos-easing="easing-in-out"
           >
-            <img src={riskmaLogo} className="w-[800px] min-w-[500px]" />
+            <img src={riskmaLogo} className="w-[1000px] min-w-[500px]" />
           </div>
         </div>
         <div className="w-full flex flex-col justify-center items-center gap-8 my-[60px] lg:my-[100px]">
