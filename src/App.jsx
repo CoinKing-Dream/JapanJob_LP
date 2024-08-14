@@ -17,7 +17,9 @@ import expManImg from "./assets/img/explanation_man.svg";
 import expWomanImg from "./assets/img/explanation_woman.svg";
 
 import riskmaLogo from "./assets/img/Logo_riskma.png";
-import benefitImg from "./assets/img/benefit-img.png";
+
+import phonePCImg from "./assets/img/phonePC.png";
+
 import benefitFirImg from "./assets/img/1_map.png";
 import benefitSecImg from "./assets/img/2_service.png";
 import benefitThiImg from "./assets/img/3_mirone.png";
@@ -105,9 +107,18 @@ function App() {
   return (
     <div className="w-full flex flex-col justify-center items-center">
       <div className="overflow-hidden w-full">
-        <div className="w-full sky-background h-[700px] flex flex-col justify-center items-center gap-5 text-white pt-[50px] sm:pt-[100px] pb-[50px] md:pb-[100px] relative rounded-b-lg">
+        <div className="flex justify-center items-center w-full sky-background h-[700px] text-white pt-[50px] sm:pt-[100px] pb-[50px] md:pb-[100px] relative rounded-b-lg">
+          <div
+            className="absolute left-[100px] top-[100px] z-100"
+            data-aos="fade-up"
+            data-aos-delay="50"
+            data-aos-easing="easing-in-out"
+          >
+            <img src={phonePCImg} className="w-[650px] min-w-[200px]" />
+          </div>
+
           <div className="absolute bg-white w-[60%] h-[50px] bottom-[-5px] rounded-t-full"></div>
-          <div className="w-full px-[0px] sm:px-[50px] md:px-[100px] lg:px-[200px] absolute top-[100px] left-0">
+          <div className="w-full px-[0px] sm:px-[50px] md:px-[100px] lg:px-[100px] absolute top-[50px] left-0">
             <div className="w-[200px] flex flex-col jusity-center items-center">
               <a href="" className="logo-animation">
                 <img
@@ -119,8 +130,9 @@ function App() {
               <div className="bg-gray-300 w-[100px] h-[30px] logo-shadow-animation"></div>
             </div>
           </div>
+          
           <div
-            className="w-full flex justify-end px-[400px] absolute top-[100px]"
+            className="right-[200px] absolute top-[100px]"
             data-aos="fade-up"
             data-aos-delay="50"
             data-aos-easing="easing-in-out"
