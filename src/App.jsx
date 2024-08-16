@@ -107,9 +107,9 @@ function App() {
   return (
     <div className="w-full flex flex-col justify-center items-center">
       <div className="overflow-hidden w-full">
-        <div className="flex justify-center items-center w-full sky-background h-[800px] text-white pt-[50px] sm:pt-[100px] pb-[50px] md:pb-[100px] relative rounded-b-lg">
+        <div className="flex justify-center items-center w-full sky-background h-[1500px] text-white pt-[50px] sm:pt-[100px] pb-[50px] md:pb-[100px] relative rounded-b-lg">
           <div
-            className="absolute left-[100px] top-[170px] z-100"
+            className="absolute left-[100px] top-[300px] z-100"
             data-aos="fade-up"
             data-aos-delay="50"
             data-aos-easing="easing-in-out"
@@ -130,9 +130,9 @@ function App() {
               <div className="bg-gray-300 w-[100px] h-[30px] logo-shadow-animation"></div>
             </div>
           </div>
-          
+
           <div
-            className="right-[50px] absolute top-[170px]"
+            className="right-[50px] absolute top-[200px]"
             data-aos="fade-up"
             data-aos-delay="50"
             data-aos-easing="easing-in-out"
@@ -157,7 +157,7 @@ function App() {
                 data-aos-delay={index * 100}
                 data-aos-easing="easing-in-out"
               >
-                <div className="z-10 text-3xl w-full h-full border-2 border-cyan-400 shadow-2xl shadow-blue-500/50 rounded-full px-[50px] flex justify-center items-center">
+                <div className="z-10 text-3xl w-full h-full border-2 border-cyan-400 shadow-2xl shadow-blue-500/50 rounded-full px-[50px] flex justify-center items-center text-[--thunder-cloud-color] font-bold">
                   {item}
                 </div>
                 <img
@@ -169,7 +169,7 @@ function App() {
           </div>
         </div>
         <div
-          className="shadow-lg shadow-cyan-500/100 overflow-hidden flex justify-center items-center bg-lime-500 font-bold text-white rounded-[20px] py-[50px] lg:py-[100px] mt-[10px] lg:mt-[50px]"
+          className="shadow-lg shadow-gray-500/100 overflow-hidden flex justify-center items-center bg-[--waterfall-color] font-bold text-[white] rounded-[20px] py-[50px] lg:py-[100px] mt-[10px] lg:mt-[50px]"
           data-aos="flip-down"
           data-aos-delay="100"
           data-aos-duration="1000"
@@ -194,7 +194,7 @@ function App() {
             <a
               href={riskmaPDF}
               target="_blank"
-              className="shadow-lg shadow-lime-500/100 w-[100%] px-[80px] py-[20px] rounded-full text-center  text-3xl md:text-4xl lg:text-5xl font-bold text-white duration-500 bg-emerald-500 hover:bg-emerald-900 hover:text-white"
+              className="shadow-lg shadow-lime-500/100 w-[100%] px-[80px] py-[20px] rounded-full text-center  text-3xl md:text-4xl lg:text-5xl font-bold text-white duration-500 bg-[--meadow-color] hover:bg-emerald-900 hover:text-white"
             >
               <span className="leading-snug">
                 パンフレットのダウンロードは
@@ -212,16 +212,20 @@ function App() {
           data-aos="fade-up"
           data-aos-duration="1000"
           data-aos-easing="easing-in-out"
-          className="flex flex-col justify-center items-center min-w-[350px] w-full flex justify-center items-center bg-gray-200 rounded-lg relative mt-[60px] pb-[50px] rounded-lg"
+          className="flex flex-col justify-center items-center min-w-[350px] w-full flex justify-center items-center bg-gray-200 rounded-lg relative mt-[20px] pb-[50px] rounded-lg"
         >
           <div
-            className="w-full relative flex flex-col justify-center items-center my-0 absolute top-[-40px]"
+            className="w-full relative flex flex-col justify-center items-center my-0 absolute top-[-50px]"
             data-aos="zoom-in"
             data-aos-duration="1000"
             data-aos-easing="easing-in-out"
           >
-            <div className="text-3xl font-bold">「リスクマ」導入の<br/><span className="text-7xl text-blue-500">5</span>つの<span className="text-5xl">メリット</span>
-</div>
+            <div className="text-4xl font-bold">
+              「リスクマ」導入の
+              <br />
+              <span className="text-8xl text-blue-500">5</span>つの
+              <span className="text-5xl">メリット</span>
+            </div>
           </div>
           <div className="w-[70%] flex flex-row flex-wrap justify-center items-center gap-[30px] sm:gap-8">
             {benefits.map((item, index) => {
@@ -231,7 +235,7 @@ function App() {
                   data-aos-delay={100 * index}
                   data-aos-easing="easing-in-out"
                 >
-                  <BenefitCard item={item} />
+                  <BenefitCard item={item} index={index}/>
                 </div>
               );
             })}
@@ -246,8 +250,8 @@ function App() {
               data-aos-delay="50"
               data-aos-easing="easing-in-out"
             >
-              <div className="w-full h-[5px] bg-lime-300 absolute z-10"></div>
-              <div className="z-20 rounded-full absoulte bg-lime-500 inline font-bold text-xl sm:text-3xl md:text-5xl text-white px-[50px] sm:px-[100px] md:px-[150px] py-[20px]">
+              <div className="w-full h-[5px] bg-[--meadow-color] absolute z-10"></div>
+              <div className="z-20 rounded-full absoulte bg-[--meadow-color] inline font-bold text-xl sm:text-3xl md:text-5xl text-white px-[50px] sm:px-[100px] md:px-[150px] py-[20px]">
                 導入実績領域
               </div>
             </div>
@@ -274,7 +278,7 @@ function App() {
         </div>
 
         <div
-          className="w-full text-center bg-sky-500 text-white py-[30px] sm:py-[50px] flex flex-col justify-center items-center relative hover:bg-sky-400"
+          className="w-full text-center bg-[--meadow-color] text-white py-[30px] sm:py-[50px] flex flex-col justify-center items-center relative"
           data-aos="fade-up"
           data-aos-delay="50"
           data-aos-easing="easing-in-out"
