@@ -2,9 +2,11 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
 import "./App.css";
+
 import ForwardToInboxOutlinedIcon from "@mui/icons-material/ForwardToInboxOutlined";
 import BrowserUpdatedTwoToneIcon from "@mui/icons-material/BrowserUpdatedTwoTone";
 import AddLocationAltTwoToneIcon from "@mui/icons-material/AddLocationAltTwoTone";
+
 import BenefitCard from "./componenets/FeedbackCard";
 
 import riskmaImg from "./assets/img/riskma.png";
@@ -96,17 +98,9 @@ function App() {
     <div className="w-full flex flex-col justify-center items-center">
       <div className="overflow-hidden w-full">
         <div className="relative flex flex-col gap-4 justify-center items-center w-full sky-background h-[950px] pt-[50px] sm:pt-[100px] pb-[50px] md:pb-[100px] rounded-b-lg">
-          <div className="absolute z-1 text-white opacity-25 text-[250px] font-bold">
+          <div className="absolute z-1 text-white opacity-30 text-[250px] font-bold">
             リスクマ
           </div>
-          {/* <div
-            className="absolute left-[100px] top-[300px] z-100"
-            data-aos="fade-up"
-            data-aos-delay="50"
-            data-aos-easing="easing-in-out"
-          >
-            <img src={phonePCImg} className="w-[650px] min-w-[200px]" />
-          </div> */}
 
           <div className="absolute bg-white w-[60%] h-[30px] bottom-[-5px] rounded-t-full"></div>
           <div className="w-full px-[0px] sm:px-[50px] md:px-[100px] lg:px-[100px] absolute top-[80px] left-0">
@@ -133,15 +127,6 @@ function App() {
             <img src={pcImg} className="w-[600px]"></img>
             <img src={phoneImg} className="w-[300px]"></img>
           </div>
-
-          {/* <div
-            className="right-[50px] absolute top-[200px]"
-            data-aos="fade-up"
-            data-aos-delay="50"
-            data-aos-easing="easing-in-out"
-          >
-            <img src={riskmaLogo} className="w-[1000px] min-w-[500px]" />
-          </div> */}
         </div>
         <div className="w-full flex flex-col justify-center items-center gap-8 my-[60px] lg:my-[100px]">
           <div
