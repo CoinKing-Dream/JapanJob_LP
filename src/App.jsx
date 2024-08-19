@@ -98,34 +98,34 @@ function App() {
     <div className="w-full flex flex-col justify-center items-center">
       <div className="overflow-hidden w-full">
         <div className="relative flex flex-col justify-center items-center w-full sky-background h-[780px] pt-[50px] sm:pt-[100px] pb-[50px] md:pb-[100px] rounded-b-lg">
-          <div className="absolute z-1 text-white opacity-30 text-[250px] font-bold pt-[200px]">
+          <div className="absolute z-1 text-white opacity-30 md:text-[170px] lg:text-[250px] font-bold pt-[200px]">
             リスクマ
           </div>
 
           <div className="absolute bg-white w-[45%] h-[25px] bottom-[-5px] rounded-t-full"></div>
-          <div className="z-10 w-full px-[0px] sm:px-[50px] md:px-[100px] lg:px-[100px] absolute top-[80px] left-0">
+          <div className="z-10 w-full px-[0px] sm:px-[30px] md:px-[30px] lg:px-[100px] absolute top-[80px] left-0">
             <div className="w-[200px] flex flex-col jusity-center items-center">
               <a href="" className="logo-animation">
                 <img
                   src={logo}
                   alt="Logo"
-                  className="w-[100px] sm:w-[150px] md:w-[200px]"
+                  className="w-[100px] md:w-[150px] lg:w-[200px]"
                 ></img>
               </a>
               <div className="bg-gray-300 w-[100px] h-[30px] logo-shadow-animation"></div>
             </div>
           </div>
 
-          <div className="z-10 font-bold text-white text-4xl mt-[50px] mb-5">
+          <div className="z-10 font-bold text-white md:text-2xl lg:text-4xl mt-[50px] mb-5">
             水災害リスクマッピングシステム
           </div>
           <div className="z-10 flex flex-row justify-center items-end">
-            <img src={riskmaImg} className="w-[600px]"></img>
-            <img src={riskmaLogo} className="w-[170px] pb-[35px]"></img>
+            <img src={riskmaImg} className="w-[500px] lg:w-[600px]"></img>
+            <img src={riskmaLogo} className="w-[130px] lg:w-[170px] pb-[35px]"></img>
           </div>
           <div className="z-20 flex flex-row justify-center items-center">
-            <img src={pcImg} className="w-[450px]"></img>
-            <img src={phoneImg} className="w-[250px]"></img>
+            <img src={pcImg} className="w-[380px] lg:w-[450px]"></img>
+            <img src={phoneImg} className="w-[200px] lg:w-[250px]"></img>
           </div>
         </div>
         <div className="w-full flex flex-col justify-center items-center gap-8 my-[50px]">
