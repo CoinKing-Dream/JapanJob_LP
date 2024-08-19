@@ -2,7 +2,6 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
 import "./App.css";
-import DoneOutlineOutlinedIcon from "@mui/icons-material/DoneOutlineOutlined";
 import ForwardToInboxOutlinedIcon from "@mui/icons-material/ForwardToInboxOutlined";
 import BrowserUpdatedTwoToneIcon from "@mui/icons-material/BrowserUpdatedTwoTone";
 import AddLocationAltTwoToneIcon from "@mui/icons-material/AddLocationAltTwoTone";
@@ -127,7 +126,7 @@ function App() {
             水災害リスクマッピングシステム
           </div>
           <div className="flex flex-row justify-center items-center gap-12">
-            <img src={riskmaImg} className="w-[800px]"></img>
+            <img src={riskmaImg} className="w-[700px]"></img>
             <img src={riskmaLogo} className="w-[200px]"></img>
           </div>
           <div className="z-20 flex flex-row justify-center items-center">
@@ -146,7 +145,7 @@ function App() {
         </div>
         <div className="w-full flex flex-col justify-center items-center gap-8 my-[60px] lg:my-[100px]">
           <div
-            className="text-2xl sm:text-4xl lg:text-5xl font-bold text-center underline decoration-wavy underline-offset-8 text-violet-800"
+            className="text-2xl sm:text-4xl lg:text-5xl font-bold text-center underline decoration-wavy underline-offset-8 text-[--thunder-cloud-color]"
             data-aos="fade-up"
             data-aos-delay="50"
             data-aos-easing="easing-in-out"
@@ -201,7 +200,7 @@ function App() {
               className="shadow-lg shadow-slate-500/100 w-[100%] px-[80px] py-[20px] rounded-full text-center  text-3xl md:text-4xl lg:text-5xl font-bold text-white duration-500 bg-[--meadow-color] hover:bg-emerald-900 hover:text-white"
             >
               <span className="leading-snug">
-                3245234パンフレットのダウンロードは
+                パンフレットのダウンロードは
                 <br />
                 こちら！
               </span>
