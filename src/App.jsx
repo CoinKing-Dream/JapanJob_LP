@@ -98,7 +98,7 @@ function App() {
     <div className="w-full flex flex-col justify-center items-center">
       <div className="overflow-hidden w-full">
         <div className="relative flex flex-col justify-center items-center w-full sky-background h-[780px] pt-[50px] sm:pt-[100px] pb-[50px] md:pb-[100px] rounded-b-lg">
-          <div className="absolute z-1 text-white opacity-30 text-[250px] font-bold">
+          <div className="absolute z-1 text-white opacity-30 text-[250px] font-bold pt-[200px]">
             リスクマ
           </div>
 
@@ -116,12 +116,12 @@ function App() {
             </div>
           </div>
 
-          <div className="z-10 font-bold text-white text-5xl mt-12 mb-8">
+          <div className="z-10 font-bold text-white text-4xl mt-[50px] mb-5">
             水災害リスクマッピングシステム
           </div>
-          <div className="z-10 flex flex-row justify-center items-end gap-12">
-            <img src={riskmaImg} className="w-[670px]"></img>
-            <img src={riskmaLogo} className="w-[170px] pb-[30px]"></img>
+          <div className="z-10 flex flex-row justify-center items-end">
+            <img src={riskmaImg} className="w-[600px]"></img>
+            <img src={riskmaLogo} className="w-[170px] pb-[35px]"></img>
           </div>
           <div className="z-20 flex flex-row justify-center items-center">
             <img src={pcImg} className="w-[450px]"></img>
@@ -129,12 +129,7 @@ function App() {
           </div>
         </div>
         <div className="w-full flex flex-col justify-center items-center gap-8 my-[50px]">
-          <div
-            className="text-2xl sm:text-4xl lg:text-5xl font-bold text-center underline decoration-wavy underline-offset-8 text-[--thunder-cloud-color]"
-            data-aos="fade-up"
-            data-aos-delay="50"
-            data-aos-easing="easing-in-out"
-          >
+          <div className="text-2xl sm:text-4xl lg:text-5xl font-bold text-center underline decoration-wavy underline-offset-8 text-[--thunder-cloud-color]">
             {sympathetic.question}
           </div>
           <div className="flex flex-row justify-center items-center gap-8 mt-10">
