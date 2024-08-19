@@ -116,16 +116,16 @@ function App() {
             </div>
           </div>
 
-          <div className="z-10 font-bold text-white text-5xl">
+          <div className="z-10 font-bold text-white text-5xl mb-5">
             水災害リスクマッピングシステム
           </div>
-          <div className="flex flex-row justify-center items-center gap-12">
+          <div className="flex flex-row justify-center items-end gap-12">
             <img src={riskmaImg} className="w-[700px]"></img>
-            <img src={riskmaLogo} className="w-[200px]"></img>
+            <img src={riskmaLogo} className="w-[200px] pb-[30px]"></img>
           </div>
           <div className="z-20 flex flex-row justify-center items-center">
-            <img src={pcImg} className="w-[600px]"></img>
-            <img src={phoneImg} className="w-[300px]"></img>
+            <img src={pcImg} className="w-[550px]"></img>
+            <img src={phoneImg} className="w-[270px]"></img>
           </div>
         </div>
         <div className="w-full flex flex-col justify-center items-center gap-8 my-[60px] lg:my-[100px]">
