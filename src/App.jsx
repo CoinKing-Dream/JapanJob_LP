@@ -97,13 +97,13 @@ function App() {
   return (
     <div className="w-full flex flex-col justify-center items-center">
       <div className="overflow-hidden w-full">
-        <div className="relative flex flex-col gap-4 justify-center items-center w-full sky-background h-[950px] pt-[50px] sm:pt-[100px] pb-[50px] md:pb-[100px] rounded-b-lg">
+        <div className="relative flex flex-col justify-center items-center w-full sky-background h-[780px] pt-[50px] sm:pt-[100px] pb-[50px] md:pb-[100px] rounded-b-lg">
           <div className="absolute z-1 text-white opacity-30 text-[250px] font-bold">
             リスクマ
           </div>
 
-          <div className="absolute bg-white w-[60%] h-[30px] bottom-[-5px] rounded-t-full"></div>
-          <div className="w-full px-[0px] sm:px-[50px] md:px-[100px] lg:px-[100px] absolute top-[80px] left-0">
+          <div className="absolute bg-white w-[45%] h-[25px] bottom-[-5px] rounded-t-full"></div>
+          <div className="z-10 w-full px-[0px] sm:px-[50px] md:px-[100px] lg:px-[100px] absolute top-[80px] left-0">
             <div className="w-[200px] flex flex-col jusity-center items-center">
               <a href="" className="logo-animation">
                 <img
@@ -116,19 +116,19 @@ function App() {
             </div>
           </div>
 
-          <div className="z-10 font-bold text-white text-5xl mb-5">
+          <div className="z-10 font-bold text-white text-5xl mt-12 mb-8">
             水災害リスクマッピングシステム
           </div>
-          <div className="flex flex-row justify-center items-end gap-12">
-            <img src={riskmaImg} className="w-[700px]"></img>
-            <img src={riskmaLogo} className="w-[200px] pb-[30px]"></img>
+          <div className="z-10 flex flex-row justify-center items-end gap-12">
+            <img src={riskmaImg} className="w-[670px]"></img>
+            <img src={riskmaLogo} className="w-[170px] pb-[30px]"></img>
           </div>
           <div className="z-20 flex flex-row justify-center items-center">
-            <img src={pcImg} className="w-[550px]"></img>
-            <img src={phoneImg} className="w-[270px]"></img>
+            <img src={pcImg} className="w-[450px]"></img>
+            <img src={phoneImg} className="w-[250px]"></img>
           </div>
         </div>
-        <div className="w-full flex flex-col justify-center items-center gap-8 my-[60px] lg:my-[100px]">
+        <div className="w-full flex flex-col justify-center items-center gap-8 my-[50px]">
           <div
             className="text-2xl sm:text-4xl lg:text-5xl font-bold text-center underline decoration-wavy underline-offset-8 text-[--thunder-cloud-color]"
             data-aos="fade-up"
