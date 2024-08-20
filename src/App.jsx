@@ -97,62 +97,62 @@ function App() {
   return (
     <div className="w-full flex flex-col justify-center items-center">
       <div className="overflow-hidden w-full">
-        <div className="relative flex flex-col justify-center items-center w-full sky-background h-[780px] pt-[50px] sm:pt-[100px] pb-[50px] md:pb-[100px] rounded-b-lg">
-          <div className="absolute z-1 text-white opacity-30 md:text-[170px] lg:text-[250px] font-bold pt-[200px]">
+        <div className="relative flex flex-col justify-center items-center gap-5 sm:gap-1 w-full sky-background h-[150vw] sm:h-[780px] pt-[80px] sm:pt-[100px] pb-[50px] md:pb-[100px] px-[10px] rounded-b-lg">
+          <div className="absolute z-1 text-white opacity-30 text-[23vw] sm:text-[150px] md:text-[170px] lg:text-[250px] font-bold pt-[200px]">
             リスクマ
           </div>
 
           <div className="absolute bg-white w-[45%] h-[25px] bottom-[-5px] rounded-t-full"></div>
-          <div className="z-10 w-full px-[0px] sm:px-[30px] md:px-[30px] lg:px-[100px] absolute top-[80px] left-0">
+          <div className="z-10 w-full px-[0px] sm:px-[30px] md:px-[30px] lg:px-[100px] absolute top-[50px] sm:top-[80px] left-0">
             <div className="w-[200px] flex flex-col jusity-center items-center">
               <a href="" className="logo-animation">
                 <img
                   src={logo}
                   alt="Logo"
-                  className="w-[100px] md:w-[150px] lg:w-[200px]"
+                  className="w-[120px] sm:w-[150px] lg:w-[200px]"
                 ></img>
               </a>
-              <div className="bg-gray-300 w-[100px] h-[30px] logo-shadow-animation"></div>
+              <div className="bg-gray-300  w-[70px] sm:w-[100px] h-[30px] logo-shadow-animation"></div>
             </div>
           </div>
 
-          <div className="z-10 font-bold text-white md:text-2xl lg:text-4xl mt-[50px] mb-5">
+          <div className="z-10 font-bold text-white text-[5vw] sm:text-2xl lg:text-4xl sm:mt-[50px] mb-5">
             水災害リスクマッピングシステム
           </div>
           <div className="z-10 flex flex-row justify-center items-end">
-            <img src={riskmaImg} className="w-[500px] lg:w-[600px]"></img>
-            <img src={riskmaLogo} className="w-[130px] lg:w-[170px] pb-[35px]"></img>
+            <img src={riskmaImg} className="w-[75%] sm:w-[400px] md:w-[500px] lg:w-[600px]"></img>
+            <img src={riskmaLogo} className="w-[22%] sm:w-[120px] md:w-[130px] lg:w-[170px] pb-[15px] md:pb-[35px]"></img>
           </div>
           <div className="z-20 flex flex-row justify-center items-center">
-            <img src={pcImg} className="w-[380px] lg:w-[450px]"></img>
-            <img src={phoneImg} className="w-[200px] lg:w-[250px]"></img>
+            <img src={pcImg} className="w-[60%] sm:w-[380px] lg:w-[450px]"></img>
+            <img src={phoneImg} className="w-[30%] sm:w-[200px] lg:w-[250px]"></img>
           </div>
         </div>
         <div className="w-full flex flex-col justify-center items-center gap-8 my-[50px]">
-          <div className="text-2xl sm:text-4xl lg:text-5xl font-bold text-center underline decoration-wavy underline-offset-8 text-[--thunder-cloud-color]">
+          <div className="text-[6vw] sm:text-4xl lg:text-5xl font-bold text-center underline decoration-wavy underline-offset-8 text-[--thunder-cloud-color]">
             {sympathetic.question}
           </div>
-          <div className="flex flex-row justify-center items-center gap-8 mt-10">
+          <div className="flex flex-col sm:flex-row justify-center items-center gap-8 mt-1 sm:mt-10">
             {sympathetic.answer.map((item, index) => (
               <div
-                className="w-[30vw] h-[200px] relative max-w-[400px]"
+                className="w-[85vw] sm:w-[28vw] h-[100px] md:h-[200px] relative max-w-[400px]"
                 data-aos="fade-up"
                 data-aos-delay={index * 100}
                 data-aos-easing="easing-in-out"
               >
-                <div className="z-10 text-3xl w-full h-full border-2 border-cyan-400 shadow-2xl shadow-blue-500/50 rounded-full px-[50px] flex justify-center items-center text-[--thunder-cloud-color] font-bold">
+                <div className="z-10 text-2xl sm:text-xl md:text-3xl w-full h-full border-2 border-cyan-400 shadow-2xl shadow-blue-500/50 rounded-full pl-[25px] pr-[30px] flex justify-center items-center text-[--thunder-cloud-color] font-bold">
                   {item}
                 </div>
                 <img
                   src={index == 1 ? expWomanImg : expManImg}
-                  className="z-100 absolute bottom-[-10px] right-0"
+                  className="z-100 absolute bottom-[-10px] sm:bottom-[-30px] right-0 w-[50px] sm:w-[70px] md:w-[90px]"
                 />
               </div>
             ))}
           </div>
         </div>
         <div
-          className="shadow-lg shadow-gray-500/100 overflow-hidden flex justify-center items-center bg-[--waterfall-color] font-bold text-[white] rounded-[20px] py-[50px] lg:py-[100px] mt-[10px] lg:mt-[50px]"
+          className="shadow-lg shadow-gray-500/100 overflow-hidden flex justify-center items-center bg-[--waterfall-color] font-bold text-[white] rounded-[20px] py-[20px] sm:py-[50px] lg:py-[100px] mt-[10px] lg:mt-[50px]"
           data-aos="flip-down"
           data-aos-delay="100"
           data-aos-duration="1000"
