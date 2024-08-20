@@ -144,15 +144,15 @@ function App() {
           <div className="text-[6vw] sm:text-4xl lg:text-5xl font-bold text-center underline decoration-wavy underline-offset-8 text-[--thunder-cloud-color]">
             {sympathetic.question}
           </div>
-          <div className="flex flex-col sm:flex-row justify-center items-center gap-8 mt-1 sm:mt-10">
+          <div className="flex flex-col md:flex-row justify-center items-center gap-12 md:gap-8 mt-1 sm:mt-10">
             {sympathetic.answer.map((item, index) => (
               <div
-                className="w-[85vw] sm:w-[28vw] h-[100px] md:h-[200px] relative max-w-[400px]"
+                className="w-[85vw] md:w-[28vw] h-[100px] md:h-[200px] relative md:max-w-[400px]"
                 data-aos="fade-up"
                 data-aos-delay={index * 100}
                 data-aos-easing="easing-in-out"
               >
-                <div className="z-10 text-2xl sm:text-xl md:text-3xl w-full h-full border-2 border-cyan-400 shadow-2xl shadow-blue-500/50 rounded-full pl-[25px] pr-[30px] flex justify-center items-center text-[--thunder-cloud-color] font-bold">
+                <div className="z-10 text-2xl md:text-3xl w-full h-full border-2 border-cyan-400 shadow-2xl shadow-blue-500/50 rounded-full pl-[25px] pr-[30px] flex justify-center items-center text-[--thunder-cloud-color] font-bold">
                   {item}
                 </div>
                 <img
@@ -171,7 +171,7 @@ function App() {
           data-aos-easing="easing-in-out"
           data-aos-anchor-placement="left-top"
         >
-          <div className="w-[80%] md:w-[50%] text-sm sm:text-xl md:text-2xl lg:text-3xl leading-5 sm:leading-10 overflow-hidden">
+          <div className="w-[80%] lg:w-[50%] text-sm sm:text-xl md:text-2xl lg:text-3xl leading-5 sm:leading-10 overflow-hidden">
             (株)建設技術研究所の水災害リスクマッピングシステム「RisKma」なら、気象
             庁の予測雨量、キキクル、注意報警報や、国・都道府県の河川水位、雨量計、
             監視カメラの情報をすべて同じ画面で確認できます。またすでに設置の観測機
