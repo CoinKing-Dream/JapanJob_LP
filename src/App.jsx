@@ -271,7 +271,7 @@ function App() {
         </div>
 
         <div
-          className="w-full text-center bg-[--meadow-color] text-white py-[30px] sm:py-[50px] flex flex-col justify-center items-center relative"
+          className="w-full text-center bg-[--meadow-color] text-white px-[30px] py-[5px] sm:py-[50px] flex flex-col justify-center items-center relative"
           data-aos="fade-up"
           data-aos-delay="50"
           data-aos-easing="easing-in-out"
@@ -284,24 +284,27 @@ function App() {
               className="px-30px py-15px w-[100px] bg-red-500 inline"
             >
               <div className="flex flex-row justify-center items-center gap-3 text-zinc-200">
-                <ForwardToInboxOutlinedIcon
-                  fontSize="large"
-                  className="email-animation invisible sm:visible text-white"
-                />
+                <div className="hidden sm:block">
+                  <ForwardToInboxOutlinedIcon
+                    fontSize="large"
+                    className="email-animation text-white"
+                  />
+                </div>
                 <div>
                   <div>
                     <span className="text-base sm:text-base md:text-xl lg:text-2xl font-bold">
                       （株）建設技術研究所の
                     </span>
                     <span className="text-xl sm:text-xl md:text-2xl lg:text-3xl font-bold">
-                      IoT監視観測パッケージ「リスクマ」{" "}
+                      IoT監視観測パッケージ{" "}
+                      <span className="text-wrap sm:text-nowrap break-keep">「リスクマ」 </span>
                     </span>
                   </div>
                   <div>
-                    <span className="font-bold text-2xl md:text-4xl underline text-white">
+                    <span className="font-bold text-xl sm:text-2xl md:text-4xl underline text-white break-all">
                       お問い合わせ・お見積り
                     </span>
-                    <span className="text-lg sm:text-base md:text-xl font-bold">
+                    <span className="text-lg sm:text-base md:text-xl font-bold break-keep">
                       はこちらから！{" "}
                     </span>
                   </div>
