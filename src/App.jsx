@@ -164,14 +164,14 @@ function App() {
           </div>
         </div>
         <div
-          className="shadow-lg shadow-gray-500/100 overflow-hidden flex justify-center items-center bg-[--waterfall-color] font-bold text-[white] rounded-[20px] py-[20px] sm:py-[50px] lg:py-[100px] mt-[10px] lg:mt-[50px]"
+          className="shadow-lg shadow-gray-500/100 overflow-hidden flex justify-center items-center bg-[--waterfall-color] font-bold text-[white] rounded-[20px] py-[30px] sm:py-[50px] lg:py-[100px] mt-[10px] lg:mt-[50px]"
           data-aos="flip-down"
           data-aos-delay="100"
           data-aos-duration="1000"
           data-aos-easing="easing-in-out"
           data-aos-anchor-placement="left-top"
         >
-          <div className="w-[80%] lg:w-[50%] text-sm sm:text-xl md:text-2xl lg:text-3xl leading-5 sm:leading-10 overflow-hidden">
+          <div className="w-[80%] lg:w-[50%] text-xl md:text-2xl lg:text-3xl leading-8 sm:leading-10 overflow-hidden">
             (株)建設技術研究所の水災害リスクマッピングシステム「RisKma」なら、気象
             庁の予測雨量、キキクル、注意報警報や、国・都道府県の河川水位、雨量計、
             監視カメラの情報をすべて同じ画面で確認できます。またすでに設置の観測機
@@ -189,10 +189,10 @@ function App() {
             <a
               href={riskmaPDF}
               target="_blank"
-              className="shadow-lg shadow-slate-500/100 w-[100%] px-[40px] py-[20px] rounded-full text-center text-base sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white duration-500 bg-[--meadow-color] hover:bg-emerald-900 hover:text-white"
+              className="shadow-lg shadow-slate-500/100 w-[100%] px-[40px] py-[20px] rounded-full text-center text-xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white duration-500 bg-[--meadow-color] hover:bg-emerald-900 hover:text-white"
             >
               <span className="leading-snug">
-                パンフレットのダウンロードはこちら！
+                パンフレットのダウンロードは<span className="break-keep">こちら！</span>
               </span>
               <BrowserUpdatedTwoToneIcon
                 fontSize="large"
@@ -208,7 +208,7 @@ function App() {
           className="flex flex-col justify-center items-center min-w-[350px] w-full flex justify-center items-center bg-gray-200 rounded-lg relative mt-[20px] pb-[50px] rounded-lg"
         >
           <div
-            className="w-full relative flex flex-col justify-center items-center absolute top-[-50px]"
+            className="w-full relative flex flex-col justify-center items-center absolute top-[-30px] sm:top-[-50px]"
             data-aos="zoom-in"
             data-aos-duration="1000"
             data-aos-easing="easing-in-out"
