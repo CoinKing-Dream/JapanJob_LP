@@ -120,12 +120,24 @@ function App() {
             水災害リスクマッピングシステム
           </div>
           <div className="z-10 flex flex-row justify-center items-end">
-            <img src={riskmaImg} className="w-[75%] sm:w-[400px] md:w-[500px] lg:w-[600px]"></img>
-            <img src={riskmaLogo} className="w-[22%] sm:w-[120px] md:w-[130px] lg:w-[170px] pb-[15px] md:pb-[35px]"></img>
+            <img
+              src={riskmaImg}
+              className="w-[75%] sm:w-[400px] md:w-[500px] lg:w-[600px]"
+            ></img>
+            <img
+              src={riskmaLogo}
+              className="w-[22%] sm:w-[120px] md:w-[130px] lg:w-[170px] pb-[15px] md:pb-[35px]"
+            ></img>
           </div>
           <div className="z-20 flex flex-row justify-center items-center">
-            <img src={pcImg} className="w-[60%] sm:w-[380px] lg:w-[450px]"></img>
-            <img src={phoneImg} className="w-[30%] sm:w-[200px] lg:w-[250px]"></img>
+            <img
+              src={pcImg}
+              className="w-[60%] sm:w-[380px] lg:w-[450px]"
+            ></img>
+            <img
+              src={phoneImg}
+              className="w-[30%] sm:w-[200px] lg:w-[250px]"
+            ></img>
           </div>
         </div>
         <div className="w-full flex flex-col justify-center items-center gap-8 my-[50px]">
@@ -177,12 +189,10 @@ function App() {
             <a
               href={riskmaPDF}
               target="_blank"
-              className="shadow-lg shadow-slate-500/100 w-[100%] px-[80px] py-[20px] rounded-full text-center  text-3xl md:text-4xl lg:text-5xl font-bold text-white duration-500 bg-[--meadow-color] hover:bg-emerald-900 hover:text-white"
+              className="shadow-lg shadow-slate-500/100 w-[100%] px-[40px] py-[20px] rounded-full text-center text-base sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white duration-500 bg-[--meadow-color] hover:bg-emerald-900 hover:text-white"
             >
               <span className="leading-snug">
-                パンフレットのダウンロードは
-                <br />
-                こちら！
+                パンフレットのダウンロードはこちら！
               </span>
               <BrowserUpdatedTwoToneIcon
                 fontSize="large"
@@ -198,19 +208,19 @@ function App() {
           className="flex flex-col justify-center items-center min-w-[350px] w-full flex justify-center items-center bg-gray-200 rounded-lg relative mt-[20px] pb-[50px] rounded-lg"
         >
           <div
-            className="w-full relative flex flex-col justify-center items-center my-0 absolute top-[-50px]"
+            className="w-full relative flex flex-col justify-center items-center absolute top-[-50px]"
             data-aos="zoom-in"
             data-aos-duration="1000"
             data-aos-easing="easing-in-out"
           >
-            <div className="text-4xl font-bold">
+            <div className="text-2xl sm:text-4xl font-bold">
               「リスクマ」導入の
               <br />
-              <span className="text-8xl text-blue-500">5</span>つの
-              <span className="text-5xl">メリット</span>
+              <span className="text-5xl sm:text-8xl text-blue-500">5</span>つの
+              <span className="text-3xl sm:text-5xl">メリット</span>
             </div>
           </div>
-          <div className="w-[70%] flex flex-row flex-wrap justify-center items-center gap-[30px] sm:gap-8">
+          <div className="w-[95vw] flex flex-row flex-wrap justify-center items-center gap-[30px] sm:gap-8">
             {benefits.map((item, index) => {
               return (
                 <div
@@ -303,7 +313,7 @@ function App() {
         </div>
 
         <div
-          className="w-full flex flex-col jusify-center items-center py-[50px] gap-7 bg-gray-100"
+          className="w-full flex flex-col jusify-center items-center px-[10px] py-[50px] gap-7 bg-gray-100"
           data-aos="fade-up"
           data-aos-delay="50"
           data-aos-easing="easing-in-out"
@@ -313,13 +323,13 @@ function App() {
               href="https://www.ctie.co.jp/index.html"
               className="hover:opacity-60 duration-200"
             >
-              <img src={CTIlogo} className="w-[200px]"></img>
+              <img src={CTIlogo} className="w-[150px] sm:w-[200px]"></img>
             </a>
             <a
               href="https://riskma.net"
               className="hover:opacity-60 duration-200"
             >
-              <img src={footer} className="w-[120px]"></img>
+              <img src={footer} className="w-[100px] sm:w-[120px]"></img>
             </a>
           </div>
           <div className="flex flex-col justify-center items-center text-sm sm:text-base">
