@@ -153,12 +153,12 @@ function App() {
                 data-aos-delay={index * 100}
                 data-aos-easing="easing-in-out"
               >
-                <div className="z-10 text-2xl md:text-2xl w-full h-full border-2 border-cyan-400 shadow-2xl shadow-blue-500/50 rounded-full pl-[25px] pr-[30px] flex justify-center items-center text-[--thunder-cloud-color] font-bold">
+                <div className="z-10 text-2xl md:text-3xl w-full h-full border-2 border-cyan-400 shadow-2xl shadow-blue-500/50 rounded-full pl-[25px] pr-[30px] flex justify-center items-center text-[--thunder-cloud-color] font-bold">
                   {item}
                 </div>
                 <img
                   src={index == 0 ? man_1_Img : (index == 1) ? womanImg : man_2_Img}
-                  className="z-100 absolute bottom-[-10px] sm:botoom-[-30px] md:bottom-[-40px] right-[-10px] sm:right-0 w-[60px] sm:w-[70px] md:w-[120px]"
+                  className="z-100 absolute bottom-[-10px] sm:botoom-[-30px] md:bottom-[-40px] right-[-10px] sm:right-0 w-[70px] sm:w-[80px] md:w-[120px]"
                 />
               </div>
             ))}
@@ -221,7 +221,7 @@ function App() {
               <span className="text-3xl sm:text-5xl">メリット</span>
             </div>
           </div>
-          <div className="w-[95vw] flex flex-row flex-wrap justify-center items-center gap-[30px] sm:gap-8">
+          <div className="w-[95vw] lg:w-[60vw] flex flex-row flex-wrap justify-center items-center gap-[30px] sm:gap-8">
             {benefits.map((item, index) => {
               return (
                 <div
