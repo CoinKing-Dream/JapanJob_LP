@@ -16,8 +16,9 @@ import logo from "./assets/img/logo.svg";
 import footer from "./assets/img/footer.png";
 import CTIlogo from "./assets/img/CTI_logo.png";
 import riskmaPDF from "./assets/pdf/RisKma.pdf";
-import expManImg from "./assets/img/explanation_man.svg";
-import expWomanImg from "./assets/img/explanation_woman.svg";
+import man_1_Img from "./assets/img/1_man.png";
+import man_2_Img from "./assets/img/2_man.png";
+import womanImg from "./assets/img/woman.png";
 
 import riskmaLogo from "./assets/img/logo-riskma.png";
 
@@ -140,7 +141,7 @@ function App() {
             ></img>
           </div>
         </div>
-        <div className="w-full flex flex-col justify-center items-center gap-8 my-[50px]">
+        <div className="w-full flex flex-col justify-center items-center gap-8 mt-[50px] mb-[80px]">
           <div className="text-[6vw] sm:text-4xl lg:text-5xl font-bold text-center underline decoration-wavy underline-offset-8 text-[--thunder-cloud-color]">
             {sympathetic.question}
           </div>
@@ -152,12 +153,12 @@ function App() {
                 data-aos-delay={index * 100}
                 data-aos-easing="easing-in-out"
               >
-                <div className="z-10 text-2xl md:text-3xl w-full h-full border-2 border-cyan-400 shadow-2xl shadow-blue-500/50 rounded-full pl-[25px] pr-[30px] flex justify-center items-center text-[--thunder-cloud-color] font-bold">
+                <div className="z-10 text-2xl md:text-2xl w-full h-full border-2 border-cyan-400 shadow-2xl shadow-blue-500/50 rounded-full pl-[25px] pr-[30px] flex justify-center items-center text-[--thunder-cloud-color] font-bold">
                   {item}
                 </div>
                 <img
-                  src={index == 1 ? expWomanImg : expManImg}
-                  className="z-100 absolute bottom-[-10px] sm:bottom-[-30px] right-0 w-[50px] sm:w-[70px] md:w-[90px]"
+                  src={index == 0 ? man_1_Img : (index == 1) ? womanImg : man_2_Img}
+                  className="z-100 absolute bottom-[-10px] sm:botoom-[-30px] md:bottom-[-40px] right-[-10px] sm:right-0 w-[60px] sm:w-[70px] md:w-[120px]"
                 />
               </div>
             ))}
